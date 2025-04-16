@@ -44,18 +44,11 @@ E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\Micr
 E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
 E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
-E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
 E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
-E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll
 E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.dll
 E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
 E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
-E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
-E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
-E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
-E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
 E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\Microsoft.Identity.Client.dll
 E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
 E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
@@ -64,8 +57,6 @@ E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\Micr
 E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
-E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
-E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\System.Collections.Immutable.dll
 E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
 E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
 E:\FPT university\Spring2025\PRN231\FoodStore\FoodStoreAPI\bin\Debug\net6.0\System.Drawing.Common.dll
