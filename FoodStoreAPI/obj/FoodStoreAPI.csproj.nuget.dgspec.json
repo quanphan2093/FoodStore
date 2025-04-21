@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\FPT university\\Spring2025\\PRN231\\FoodStore\\FoodStoreAPI\\FoodStoreAPI.csproj": {}
+    "C:\\Users\\admin\\Desktop\\prn231\\FoodStoreAPI\\FoodStoreAPI.csproj": {}
   },
   "projects": {
-    "E:\\FPT university\\Spring2025\\PRN231\\FoodStore\\FoodStoreAPI\\FoodStoreAPI.csproj": {
+    "C:\\Users\\admin\\Desktop\\prn231\\FoodStoreAPI\\FoodStoreAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\FPT university\\Spring2025\\PRN231\\FoodStore\\FoodStoreAPI\\FoodStoreAPI.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Desktop\\prn231\\FoodStoreAPI\\FoodStoreAPI.csproj",
         "projectName": "FoodStoreAPI",
-        "projectPath": "E:\\FPT university\\Spring2025\\PRN231\\FoodStore\\FoodStoreAPI\\FoodStoreAPI.csproj",
+        "projectPath": "C:\\Users\\admin\\Desktop\\prn231\\FoodStoreAPI\\FoodStoreAPI.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "E:\\FPT university\\Spring2025\\PRN231\\FoodStore\\FoodStoreAPI\\obj\\",
+        "outputPath": "C:\\Users\\admin\\Desktop\\prn231\\FoodStoreAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -70,6 +70,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.32, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
