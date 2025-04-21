@@ -86,7 +86,13 @@ namespace FoodStoreAPI.DAO
             try
             {
                 account = FoodStoreContext.Ins.Accounts.FirstOrDefault(x => x.Username == username && x.Email == email);
-
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return account;
+        }
         public static List<AccountLDTO> getAccount()
         {
             FoodStoreContext context = new FoodStoreContext();
@@ -135,9 +141,10 @@ namespace FoodStoreAPI.DAO
                         Phone = x.Phone,
                         RoleName = x.Role.RoleName
                     }).ToList();
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
-                throw new Exception (ex.Message);
+                throw new Exception(ex.Message);
             }
             return listAccount;
         }
