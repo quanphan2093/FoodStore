@@ -165,5 +165,39 @@ namespace FoodStoreAPI.DAO
                 throw new Exception(ex.Message);
             }
         }
+
+        public static AccountDTO findAccountByEmail(string email)
+        {
+            Account account = new Account();
+            try
+            {
+                account = FoodStoreContext.Ins.Accounts.FirstOrDefault(x => x.Email == email);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return _mapper.Map<AccountDTO>(account);
+        }
+
+        public static void changePassword(string email, string password)
+        {
+            Account account = FoodStoreContext.Ins.Accounts.FirstOrDefault(x => x.Email.Equals(email));
+            if (account != null)
+            {
+                try
+                {
+                    String passHash = HashPassword(password);
+                    account.Password = passHash;
+                    account.UpdateAt = DateTime.Now;
+                    FoodStoreContext.Ins.Accounts.Update(account);
+                    FoodStoreContext.Ins.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+            }
+        }
     }
 }
