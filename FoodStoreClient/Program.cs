@@ -1,7 +1,12 @@
+using FoodStoreClient.Pages.Guest.Verify_Email;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddHttpClient();
+builder.Services.AddTransient<EmailService>();
+builder.Services.AddTransient<ForgotPasswordService>();
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromMinutes(30); 
