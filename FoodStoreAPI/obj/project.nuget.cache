@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WQ8SvGoCtPn3gUx1qKtjGQxkh134NThLR9Lh4bf7f6WkoJbzNFfVpyajty7Ig8saRO4Y7VjuiqjICsjmtG4I7w==",
+  "dgSpecHash": "Na5sRyNHEVg=",
   "success": true,
-  "projectFilePath": "E:\\FPT university\\Spring2025\\PRN231\\FoodStore\\FoodStoreAPI\\FoodStoreAPI.csproj",
+  "projectFilePath": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\FoodStoreAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
