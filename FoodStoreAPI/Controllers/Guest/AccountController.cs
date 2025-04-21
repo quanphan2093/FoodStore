@@ -64,5 +64,16 @@ namespace FoodStoreAPI.Controllers.Guest
         {
             return Ok(AccountDAO.findAccountByUsernameAndEmail(username, email));
         }
+        [HttpGet("Guest/Account/ForgotPassword")]
+        public IActionResult findAccountByEmail(string email)
+        {
+            return Ok(AccountDAO.findAccountByEmail(email));
+        }
+        [HttpPut("Guest/Account/ChangePassword")]
+        public IActionResult changePassword(string email, string pass)
+        {
+            AccountDAO.changePassword(email, pass);
+            return Ok();
+        }
     }
 }
