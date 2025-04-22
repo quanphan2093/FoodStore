@@ -199,5 +199,40 @@ namespace FoodStoreAPI.DAO
                 }
             }
         }
+
+        public static void updateInformationAccountById(int id, AccountDTO accountdto)
+        {
+            Account account = FoodStoreContext.Ins.Accounts.FirstOrDefault(x => x.AccId == id);
+            if (account != null)
+            {
+                try
+                {
+                    account.Phone = accountdto.Phone;
+                    account.Name = accountdto.Name;
+                    account.UpdateAt = DateTime.Now;
+                    account.Address = accountdto.Address;
+                    FoodStoreContext.Ins.Accounts.Update(account);
+                    FoodStoreContext.Ins.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+            }
+        }
+
+        public static Account findAccountById(int id)
+        {
+            Account account = new Account();
+            try
+            {
+                account = FoodStoreContext.Ins.Accounts.Include(x => x.Role).FirstOrDefault(x => x.AccId == id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return account;
+        }
     }
 }

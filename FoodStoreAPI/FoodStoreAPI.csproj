@@ -21,7 +21,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Controllers\Customer\" />
 	  <Folder Include="Controllers\Authen\" />
 	  <Folder Include="Controllers\Ship\" />
 	  <Folder Include="Controllers\Sale\" />
