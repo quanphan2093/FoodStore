@@ -1,4 +1,5 @@
 ﻿using FoodStoreAPI.DAO;
+using FoodStoreAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FoodStoreAPI.Controllers.Admin
@@ -19,5 +20,45 @@ namespace FoodStoreAPI.Controllers.Admin
         {
             return Ok(OrderDAO.getListOrderRevenueAdmin(dateNow, dateSevenDay));
         }
+        // GET:
+        [HttpGet("Admin/GetAll")]
+        public IActionResult GetAllOrders()
+        {
+            var orders = OrderDAO.GetAllOrders();
+            return Ok(orders);
+        }
+        // POST: Thêm đơn hàng
+        [HttpPost("Admin/Add")]
+        public IActionResult AddOrder([FromBody] Order order)
+        {
+            if (!ModelState.IsValid)
+            {
+                var errorList = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage);
+                return BadRequest("ModelState Error: " + string.Join(" | ", errorList));
+            }
+
+            order.CreateAt = DateTime.Now;
+            order.UpdateAt = DateTime.Now;
+
+            var result = OrderDAO.Add(order);
+            return result ? Ok("Added") : BadRequest("Failed");
+        }
+
+        // PUT: Sửa đơn hàng
+        [HttpPut("Admin/Update")]
+        public IActionResult UpdateOrder([FromBody] Order order)
+        {
+            var result = OrderDAO.Update(order);
+            return result ? Ok("Updated") : BadRequest("Failed");
+        }
+
+        // DELETE: Xoá đơn hàng
+        [HttpDelete("Admin/Delete/{id}")]
+        public IActionResult DeleteOrder(int id)
+        {
+            var result = OrderDAO.Delete(id);
+            return result ? Ok("Deleted") : BadRequest("Failed");
+        }
+
     }
 }

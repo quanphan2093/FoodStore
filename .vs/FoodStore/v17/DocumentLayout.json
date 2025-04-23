@@ -1,85 +1,93 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Semester 8\\prn3\\Project\\FoodStore\\",
+  "WorkspaceRootPath": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\project\\foodstore\\foodstoreapi\\controllers\\admin\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|solutionrelative:foodstoreapi\\controllers\\admin\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3A454C23-3353-40A3-986D-593D6C7B8B04}|FoodStoreClient\\FoodStoreClient.csproj|d:\\semester 8\\prn3\\prj\\foodstore\\foodstoreclient\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3A454C23-3353-40A3-986D-593D6C7B8B04}|FoodStoreClient\\FoodStoreClient.csproj|solutionrelative:foodstoreclient\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\project\\foodstore\\foodstoreapi\\controllers\\admin\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3A454C23-3353-40A3-986D-593D6C7B8B04}|FoodStoreClient\\FoodStoreClient.csproj|d:\\semester 8\\prn3\\prj\\foodstore\\foodstoreclient\\pages\\admin\\restoran_management_account\\management_account.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3A454C23-3353-40A3-986D-593D6C7B8B04}|FoodStoreClient\\FoodStoreClient.csproj|solutionrelative:foodstoreclient\\pages\\admin\\restoran_management_account\\management_account.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\prj\\foodstore\\foodstoreapi\\controllers\\admin\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|solutionrelative:foodstoreapi\\controllers\\admin\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\project\\foodstore\\foodstoreapi\\dao\\orderdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\prj\\foodstore\\foodstoreapi\\dao\\orderdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|solutionrelative:foodstoreapi\\dao\\orderdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\project\\foodstore\\foodstoreapi\\dao\\accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\prj\\foodstore\\foodstoreapi\\controllers\\admin\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|solutionrelative:foodstoreapi\\controllers\\admin\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\prj\\foodstore\\foodstoreapi\\dao\\accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|solutionrelative:foodstoreapi\\dao\\accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\project\\foodstore\\foodstoreapi\\dao\\revenuedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\prj\\foodstore\\foodstoreapi\\dao\\revenuedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|solutionrelative:foodstoreapi\\dao\\revenuedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\project\\foodstore\\foodstoreapi\\dtos\\accountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\prj\\foodstore\\foodstoreapi\\dtos\\accountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|solutionrelative:foodstoreapi\\dtos\\accountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\project\\foodstore\\foodstoreapi\\dtos\\accountldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\prj\\foodstore\\foodstoreapi\\dtos\\accountldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|solutionrelative:foodstoreapi\\dtos\\accountldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\project\\foodstore\\foodstoreapi\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\prj\\foodstore\\foodstoreapi\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|solutionrelative:foodstoreapi\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\project\\foodstore\\foodstoreapi\\dtos\\roledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\prj\\foodstore\\foodstoreapi\\dtos\\roledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|solutionrelative:foodstoreapi\\dtos\\roledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\project\\foodstore\\foodstoreapi\\dtos\\revenuedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\prj\\foodstore\\foodstoreapi\\dtos\\revenuedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|solutionrelative:foodstoreapi\\dtos\\revenuedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\project\\foodstore\\foodstoreapi\\dtos\\productldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\prj\\foodstore\\foodstoreapi\\dtos\\productldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|solutionrelative:foodstoreapi\\dtos\\productldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\project\\foodstore\\foodstoreapi\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\prj\\foodstore\\foodstoreapi\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|solutionrelative:foodstoreapi\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\project\\foodstore\\foodstoreapi\\dtos\\productcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\prj\\foodstore\\foodstoreapi\\dtos\\productcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|solutionrelative:foodstoreapi\\dtos\\productcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\project\\foodstore\\foodstoreapi\\dtos\\orderldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\prj\\foodstore\\foodstoreapi\\dtos\\orderldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|solutionrelative:foodstoreapi\\dtos\\orderldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\project\\foodstore\\foodstoreapi\\dtos\\orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\prj\\foodstore\\foodstoreapi\\dtos\\orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|solutionrelative:foodstoreapi\\dtos\\orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\project\\foodstore\\foodstoreapi\\dtos\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\prj\\foodstore\\foodstoreapi\\dtos\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|solutionrelative:foodstoreapi\\dtos\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\project\\foodstore\\foodstoreapi\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\prj\\foodstore\\foodstoreapi\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|solutionrelative:foodstoreapi\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\project\\foodstore\\foodstoreapi\\dtos\\cartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\prj\\foodstore\\foodstoreapi\\dtos\\cartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|solutionrelative:foodstoreapi\\dtos\\cartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\project\\foodstore\\foodstoreapi\\foodstoreapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\prj\\foodstore\\foodstoreapi\\foodstoreapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|solutionrelative:foodstoreapi\\foodstoreapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\project\\foodstore\\foodstoreapi\\dao\\categorydao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|d:\\semester 8\\prn3\\prj\\foodstore\\foodstoreapi\\dao\\categorydao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{517E8AE8-CB5D-47A6-ACB7-03F58B0AB34D}|FoodStoreAPI\\FoodStoreAPI.csproj|solutionrelative:foodstoreapi\\dao\\categorydao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -90,7 +98,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 134,
+          "SelectedChildIndex": 129,
           "Children": [
             {
               "$type": "Bookmark",
@@ -610,102 +618,124 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreClient\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "FoodStoreClient\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreClient\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "FoodStoreClient\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAGABAAAAAAAAAAAqwI0BAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-23T16:21:33.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Management_Account.cshtml",
+              "DocumentMoniker": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreClient\\Pages\\Admin\\Restoran_Management_Account\\Management_Account.cshtml",
+              "RelativeDocumentMoniker": "FoodStoreClient\\Pages\\Admin\\Restoran_Management_Account\\Management_Account.cshtml",
+              "ToolTip": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreClient\\Pages\\Admin\\Restoran_Management_Account\\Management_Account.cshtml",
+              "RelativeToolTip": "FoodStoreClient\\Pages\\Admin\\Restoran_Management_Account\\Management_Account.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-23T16:20:47.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "OrderDAO.cs",
-              "DocumentMoniker": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DAO\\OrderDAO.cs",
+              "DocumentMoniker": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DAO\\OrderDAO.cs",
               "RelativeDocumentMoniker": "FoodStoreAPI\\DAO\\OrderDAO.cs",
-              "ToolTip": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DAO\\OrderDAO.cs",
+              "ToolTip": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DAO\\OrderDAO.cs",
               "RelativeToolTip": "FoodStoreAPI\\DAO\\OrderDAO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAqwFAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-21T13:38:46.34Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "RevenueDAO.cs",
-              "DocumentMoniker": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DAO\\RevenueDAO.cs",
+              "DocumentMoniker": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DAO\\RevenueDAO.cs",
               "RelativeDocumentMoniker": "FoodStoreAPI\\DAO\\RevenueDAO.cs",
-              "ToolTip": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DAO\\RevenueDAO.cs",
+              "ToolTip": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DAO\\RevenueDAO.cs",
               "RelativeToolTip": "FoodStoreAPI\\DAO\\RevenueDAO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T13:38:00.238Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T13:38:00.238Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "OrderController.cs",
-              "DocumentMoniker": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\Controllers\\Admin\\OrderController.cs",
+              "DocumentMoniker": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\Controllers\\Admin\\OrderController.cs",
               "RelativeDocumentMoniker": "FoodStoreAPI\\Controllers\\Admin\\OrderController.cs",
-              "ToolTip": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\Controllers\\Admin\\OrderController.cs",
+              "ToolTip": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\Controllers\\Admin\\OrderController.cs",
               "RelativeToolTip": "FoodStoreAPI\\Controllers\\Admin\\OrderController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABJAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAqwEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-21T13:37:30.783Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Account.cs",
-              "DocumentMoniker": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\Models\\Account.cs",
+              "DocumentMoniker": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\Models\\Account.cs",
               "RelativeDocumentMoniker": "FoodStoreAPI\\Models\\Account.cs",
-              "ToolTip": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\Models\\Account.cs",
+              "ToolTip": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\Models\\Account.cs",
               "RelativeToolTip": "FoodStoreAPI\\Models\\Account.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T13:20:54.154Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T13:20:54.154Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "AccountDAO.cs",
-              "DocumentMoniker": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DAO\\AccountDAO.cs",
+              "DocumentMoniker": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DAO\\AccountDAO.cs",
               "RelativeDocumentMoniker": "FoodStoreAPI\\DAO\\AccountDAO.cs",
-              "ToolTip": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DAO\\AccountDAO.cs",
+              "ToolTip": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DAO\\AccountDAO.cs",
               "RelativeToolTip": "FoodStoreAPI\\DAO\\AccountDAO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T13:16:40.552Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T13:16:40.552Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\Controllers\\Admin\\AccountController.cs",
+              "DocumentMoniker": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\Controllers\\Admin\\AccountController.cs",
               "RelativeDocumentMoniker": "FoodStoreAPI\\Controllers\\Admin\\AccountController.cs",
-              "ToolTip": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\Controllers\\Admin\\AccountController.cs*",
-              "RelativeToolTip": "FoodStoreAPI\\Controllers\\Admin\\AccountController.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABCAAAAAAAAAA==",
+              "ToolTip": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\Controllers\\Admin\\AccountController.cs",
+              "RelativeToolTip": "FoodStoreAPI\\Controllers\\Admin\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-21T13:13:57.957Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "RoleDTO.cs",
-              "DocumentMoniker": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DTOs\\RoleDTO.cs",
+              "DocumentMoniker": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DTOs\\RoleDTO.cs",
               "RelativeDocumentMoniker": "FoodStoreAPI\\DTOs\\RoleDTO.cs",
-              "ToolTip": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DTOs\\RoleDTO.cs",
+              "ToolTip": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DTOs\\RoleDTO.cs",
               "RelativeToolTip": "FoodStoreAPI\\DTOs\\RoleDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T13:07:00.621Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T13:07:00.621Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "RevenueDTO.cs",
-              "DocumentMoniker": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DTOs\\RevenueDTO.cs",
+              "DocumentMoniker": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DTOs\\RevenueDTO.cs",
               "RelativeDocumentMoniker": "FoodStoreAPI\\DTOs\\RevenueDTO.cs",
-              "ToolTip": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DTOs\\RevenueDTO.cs",
+              "ToolTip": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DTOs\\RevenueDTO.cs",
               "RelativeToolTip": "FoodStoreAPI\\DTOs\\RevenueDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -713,11 +743,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "productLDTO.cs",
-              "DocumentMoniker": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DTOs\\productLDTO.cs",
+              "DocumentMoniker": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DTOs\\productLDTO.cs",
               "RelativeDocumentMoniker": "FoodStoreAPI\\DTOs\\productLDTO.cs",
-              "ToolTip": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DTOs\\productLDTO.cs",
+              "ToolTip": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DTOs\\productLDTO.cs",
               "RelativeToolTip": "FoodStoreAPI\\DTOs\\productLDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -725,11 +755,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "ProductDTO.cs",
-              "DocumentMoniker": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DTOs\\ProductDTO.cs",
+              "DocumentMoniker": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DTOs\\ProductDTO.cs",
               "RelativeDocumentMoniker": "FoodStoreAPI\\DTOs\\ProductDTO.cs",
-              "ToolTip": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DTOs\\ProductDTO.cs",
+              "ToolTip": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DTOs\\ProductDTO.cs",
               "RelativeToolTip": "FoodStoreAPI\\DTOs\\ProductDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -737,11 +767,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "ProductCart.cs",
-              "DocumentMoniker": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DTOs\\ProductCart.cs",
+              "DocumentMoniker": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DTOs\\ProductCart.cs",
               "RelativeDocumentMoniker": "FoodStoreAPI\\DTOs\\ProductCart.cs",
-              "ToolTip": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DTOs\\ProductCart.cs",
+              "ToolTip": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DTOs\\ProductCart.cs",
               "RelativeToolTip": "FoodStoreAPI\\DTOs\\ProductCart.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -749,11 +779,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "OrderLDTO.cs",
-              "DocumentMoniker": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DTOs\\OrderLDTO.cs",
+              "DocumentMoniker": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DTOs\\OrderLDTO.cs",
               "RelativeDocumentMoniker": "FoodStoreAPI\\DTOs\\OrderLDTO.cs",
-              "ToolTip": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DTOs\\OrderLDTO.cs",
+              "ToolTip": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DTOs\\OrderLDTO.cs",
               "RelativeToolTip": "FoodStoreAPI\\DTOs\\OrderLDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -761,11 +791,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "OrderItemDTO.cs",
-              "DocumentMoniker": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DTOs\\OrderItemDTO.cs",
+              "DocumentMoniker": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DTOs\\OrderItemDTO.cs",
               "RelativeDocumentMoniker": "FoodStoreAPI\\DTOs\\OrderItemDTO.cs",
-              "ToolTip": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DTOs\\OrderItemDTO.cs",
+              "ToolTip": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DTOs\\OrderItemDTO.cs",
               "RelativeToolTip": "FoodStoreAPI\\DTOs\\OrderItemDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -773,11 +803,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "OrderDTO.cs",
-              "DocumentMoniker": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DTOs\\OrderDTO.cs",
+              "DocumentMoniker": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DTOs\\OrderDTO.cs",
               "RelativeDocumentMoniker": "FoodStoreAPI\\DTOs\\OrderDTO.cs",
-              "ToolTip": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DTOs\\OrderDTO.cs",
+              "ToolTip": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DTOs\\OrderDTO.cs",
               "RelativeToolTip": "FoodStoreAPI\\DTOs\\OrderDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -785,11 +815,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "CategoryDTO.cs",
-              "DocumentMoniker": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DTOs\\CategoryDTO.cs",
+              "DocumentMoniker": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DTOs\\CategoryDTO.cs",
               "RelativeDocumentMoniker": "FoodStoreAPI\\DTOs\\CategoryDTO.cs",
-              "ToolTip": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DTOs\\CategoryDTO.cs",
+              "ToolTip": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DTOs\\CategoryDTO.cs",
               "RelativeToolTip": "FoodStoreAPI\\DTOs\\CategoryDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -797,11 +827,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "CartDTO.cs",
-              "DocumentMoniker": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DTOs\\CartDTO.cs",
+              "DocumentMoniker": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DTOs\\CartDTO.cs",
               "RelativeDocumentMoniker": "FoodStoreAPI\\DTOs\\CartDTO.cs",
-              "ToolTip": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DTOs\\CartDTO.cs",
+              "ToolTip": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DTOs\\CartDTO.cs",
               "RelativeToolTip": "FoodStoreAPI\\DTOs\\CartDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -809,24 +839,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "AccountLDTO.cs",
-              "DocumentMoniker": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DTOs\\AccountLDTO.cs",
+              "DocumentMoniker": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DTOs\\AccountLDTO.cs",
               "RelativeDocumentMoniker": "FoodStoreAPI\\DTOs\\AccountLDTO.cs",
-              "ToolTip": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DTOs\\AccountLDTO.cs",
+              "ToolTip": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DTOs\\AccountLDTO.cs",
               "RelativeToolTip": "FoodStoreAPI\\DTOs\\AccountLDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T13:07:00.685Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T13:07:00.685Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "CategoryDAO.cs",
-              "DocumentMoniker": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DAO\\CategoryDAO.cs",
+              "DocumentMoniker": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DAO\\CategoryDAO.cs",
               "RelativeDocumentMoniker": "FoodStoreAPI\\DAO\\CategoryDAO.cs",
-              "ToolTip": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DAO\\CategoryDAO.cs",
+              "ToolTip": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DAO\\CategoryDAO.cs",
               "RelativeToolTip": "FoodStoreAPI\\DAO\\CategoryDAO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -834,11 +863,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "FoodStoreAPI.csproj",
-              "DocumentMoniker": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\FoodStoreAPI.csproj",
+              "DocumentMoniker": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\FoodStoreAPI.csproj",
               "RelativeDocumentMoniker": "FoodStoreAPI\\FoodStoreAPI.csproj",
-              "ToolTip": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\FoodStoreAPI.csproj",
+              "ToolTip": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\FoodStoreAPI.csproj",
               "RelativeToolTip": "FoodStoreAPI\\FoodStoreAPI.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -846,16 +875,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "AccountDTO.cs",
-              "DocumentMoniker": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DTOs\\AccountDTO.cs",
+              "DocumentMoniker": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DTOs\\AccountDTO.cs",
               "RelativeDocumentMoniker": "FoodStoreAPI\\DTOs\\AccountDTO.cs",
-              "ToolTip": "D:\\Semester 8\\prn3\\Project\\FoodStore\\FoodStoreAPI\\DTOs\\AccountDTO.cs",
+              "ToolTip": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\DTOs\\AccountDTO.cs",
               "RelativeToolTip": "FoodStoreAPI\\DTOs\\AccountDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T13:07:00.813Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T13:07:00.813Z"
             }
           ]
         },

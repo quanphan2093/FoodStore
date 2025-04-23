@@ -36,5 +36,45 @@ namespace FoodStoreAPI.DAO
             }
             return list;
         }
+
+        public static List<Order> GetAllOrders()
+        {
+            using (var context = new FoodStoreContext())
+            {
+                return context.Orders.ToList();
+            }
+        }
+
+        public static bool Add(Order order)
+        {
+            using var db = new FoodStoreContext();
+            db.Orders.Add(order);
+            return db.SaveChanges() > 0;
+        }
+
+        public static bool Update(Order order)
+        {
+            using var db = new FoodStoreContext();
+            var existing = db.Orders.FirstOrDefault(o => o.OrderId == order.OrderId);
+            if (existing == null) return false;
+
+            existing.CustomerId = order.CustomerId;
+            existing.Gtotal = order.Gtotal;
+            existing.OrderDate = order.OrderDate;
+            existing.Status = order.Status;
+            existing.UpdateAt = DateTime.Now;
+
+            return db.SaveChanges() > 0;
+        }
+
+        public static bool Delete(int id)
+        {
+            using var db = new FoodStoreContext();
+            var order = db.Orders.Find(id);
+            if (order == null) return false;
+            db.Orders.Remove(order);
+            return db.SaveChanges() > 0;
+        }
+
     }
 }
