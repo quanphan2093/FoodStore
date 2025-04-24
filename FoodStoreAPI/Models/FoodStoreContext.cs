@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -7,8 +8,14 @@ namespace FoodStoreAPI.Models
 {
     public partial class FoodStoreContext : DbContext
     {
+        public static FoodStoreContext Ins = new FoodStoreContext();
         public FoodStoreContext()
         {
+            if(Ins != null)
+            {
+                Ins = this;
+            }
+
         }
 
         public FoodStoreContext(DbContextOptions<FoodStoreContext> options)
