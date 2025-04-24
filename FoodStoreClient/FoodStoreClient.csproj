@@ -57,7 +57,6 @@
     <Folder Include="Pages\Admin\" />
     <Folder Include="Pages\Customer\" />
     <Folder Include="Pages\Guest\" />
-    <Folder Include="Pages\Ship\" />
     <Folder Include="Pages\Sale\" />
   </ItemGroup>
 
