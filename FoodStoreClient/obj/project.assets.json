@@ -2965,24 +2965,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\admin\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\huylo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\FPT university\\Spring2025\\PRN231\\FoodStore\\FoodStoreClient\\FoodStoreClient.csproj",
+      "projectUniqueName": "D:\\PRN231_BL5\\PrọectPRN231_BL5\\FoodStoreClient\\FoodStoreClient.csproj",
       "projectName": "FoodStoreClient",
-      "projectPath": "E:\\FPT university\\Spring2025\\PRN231\\FoodStore\\FoodStoreClient\\FoodStoreClient.csproj",
-      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "E:\\FPT university\\Spring2025\\PRN231\\FoodStore\\FoodStoreClient\\obj\\",
+      "projectPath": "D:\\PRN231_BL5\\PrọectPRN231_BL5\\FoodStoreClient\\FoodStoreClient.csproj",
+      "packagesPath": "C:\\Users\\huylo\\.nuget\\packages\\",
+      "outputPath": "D:\\PRN231_BL5\\PrọectPRN231_BL5\\FoodStoreClient\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\huylo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2990,15 +2985,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\FPT university\\Spring2025\\PRN231\\FoodStore\\FoodStoreAPI\\FoodStoreAPI.csproj": {
-              "projectPath": "E:\\FPT university\\Spring2025\\PRN231\\FoodStore\\FoodStoreAPI\\FoodStoreAPI.csproj"
+            "D:\\PRN231_BL5\\PrọectPRN231_BL5\\FoodStoreAPI\\FoodStoreAPI.csproj": {
+              "projectPath": "D:\\PRN231_BL5\\PrọectPRN231_BL5\\FoodStoreAPI\\FoodStoreAPI.csproj"
             }
           }
         }
@@ -3007,6 +3001,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3031,7 +3030,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
