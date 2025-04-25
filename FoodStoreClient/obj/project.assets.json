@@ -3009,19 +3009,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\admin\\.nuget\\packages\\": {}
+    "C:\\Users\\admin\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreClient\\FoodStoreClient.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\Desktop\\prn231\\FoodStoreClient\\FoodStoreClient.csproj",
       "projectName": "FoodStoreClient",
-      "projectPath": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreClient\\FoodStoreClient.csproj",
+      "projectPath": "C:\\Users\\admin\\Desktop\\prn231\\FoodStoreClient\\FoodStoreClient.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreClient\\obj\\",
+      "outputPath": "C:\\Users\\admin\\Desktop\\prn231\\FoodStoreClient\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3036,8 +3041,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\FoodStoreAPI.csproj": {
-              "projectPath": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreAPI\\FoodStoreAPI.csproj"
+            "C:\\Users\\admin\\Desktop\\prn231\\FoodStoreAPI\\FoodStoreAPI.csproj": {
+              "projectPath": "C:\\Users\\admin\\Desktop\\prn231\\FoodStoreAPI\\FoodStoreAPI.csproj"
             }
           }
         }
@@ -3046,11 +3051,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3075,7 +3075,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

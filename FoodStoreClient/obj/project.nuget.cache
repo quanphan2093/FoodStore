@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "p/0nZnr0VUs=",
+  "dgSpecHash": "6vNenqRrFfEz2AQpdafapeEDUH8Ioyvi5/3raKj8SLux04kjA9aHlb7tKn523YHvSGKEpnaou3e9+EpYlMuX8g==",
   "success": true,
-  "projectFilePath": "D:\\Semester 8\\prn3\\Prj\\FoodStore\\FoodStoreClient\\FoodStoreClient.csproj",
+  "projectFilePath": "C:\\Users\\admin\\Desktop\\prn231\\FoodStoreClient\\FoodStoreClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.32\\microsoft.aspnetcore.authentication.jwtbearer.6.0.32.nupkg.sha512",
