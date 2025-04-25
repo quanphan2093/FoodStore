@@ -132,5 +132,67 @@ namespace FoodStoreAPI.DAO
                 }
             }
         }
+
+        public static List<ProductDTO> getProductOrder(int id)
+        {
+            var listProduct = new List<ProductDTO>();
+            try
+            {
+                FoodStoreContext context = new FoodStoreContext();
+                listProduct = context.Products
+                    .Include(x => x.Cate)
+                    .Include(x => x.Acc)
+                    .Where(x => x.Acc.AccId == id)
+                    .Select(x => new ProductDTO
+                    {
+                        Images = x.Images,
+                        Name = x.Name,
+                        Price = x.Price,
+                        Unit = x.Unit,
+                        Quantity = x.Quantity,
+                        ProductStatus = x.ProductStatus,
+                        CateName = x.Cate.CateName,
+                        NameAccount = x.Acc.Name
+
+                    }).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return listProduct;
+        }
+
+        public static List<ProductDTO> getProductOn()
+        {
+            var listProduct = new List<ProductDTO>();
+            try
+            {
+                FoodStoreContext context = new FoodStoreContext();
+                listProduct = context.Products
+                    .Include(x => x.Cate)
+                    .Include(x => x.Acc)
+                    .Where(x => x.ProductStatus == "On")
+                    .Select(x => new ProductDTO
+                    {
+                        ProId = x.ProId,
+                        Name = x.Name,
+                        Price = x.Price,
+                        Unit = x.Unit,
+                        Images = x.Images,
+                        CreateAt = x.CreateAt,
+                        Quantity = x.Quantity,
+                        ProductStatus = x.ProductStatus,
+                        AccId = x.AccId,
+                        CateId = x.CateId
+                    })
+                    .ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return listProduct;
+        }
     }
 }
