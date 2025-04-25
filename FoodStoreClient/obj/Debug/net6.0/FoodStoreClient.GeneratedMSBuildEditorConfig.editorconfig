@@ -1,0 +1,131 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = FoodStoreClient
+build_property.RootNamespace = FoodStoreClient
+build_property.ProjectDir = D:\PRN231_BL5\PrọectPRN231_BL5\FoodStoreClient\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\PRN231_BL5\PrọectPRN231_BL5\FoodStoreClient
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/Admin/Restoran_Management_Account/Management_Account.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUmVzdG9yYW5fTWFuYWdlbWVudF9BY2NvdW50XE1hbmFnZW1lbnRfQWNjb3VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/Admin/Restoran_Management_Order/Management_Order.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUmVzdG9yYW5fTWFuYWdlbWVudF9PcmRlclxNYW5hZ2VtZW50X09yZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/Admin/Restoran_Management_Revenue/Management_Revenue.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUmVzdG9yYW5fTWFuYWdlbWVudF9SZXZlbnVlXE1hbmFnZW1lbnRfUmV2ZW51ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/Customer/Resstoran_UserProfile/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcUmVzc3RvcmFuX1VzZXJQcm9maWxlXFByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/Customer/Restoran_Change_Password/Change_Password.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcUmVzdG9yYW5fQ2hhbmdlX1Bhc3N3b3JkXENoYW5nZV9QYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/Customer/Restoran_Change_Password/Change_Passwords.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcUmVzdG9yYW5fQ2hhbmdlX1Bhc3N3b3JkXENoYW5nZV9QYXNzd29yZHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/Customer/Restoran_Home/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcUmVzdG9yYW5fSG9tZVxIb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/Customer/Restoran_Logout/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJcUmVzdG9yYW5fTG9nb3V0XExvZ291dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/Guest/Restoran_About/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3Vlc3RcUmVzdG9yYW5fQWJvdXRcQWJvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/Guest/Restoran_Booking/Booking.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3Vlc3RcUmVzdG9yYW5fQm9va2luZ1xCb29raW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/Guest/Restoran_Contact/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3Vlc3RcUmVzdG9yYW5fQ29udGFjdFxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/Guest/Restoran_Forgot_Password/Change_Password.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3Vlc3RcUmVzdG9yYW5fRm9yZ290X1Bhc3N3b3JkXENoYW5nZV9QYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/Guest/Restoran_Forgot_Password/ErrorPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3Vlc3RcUmVzdG9yYW5fRm9yZ290X1Bhc3N3b3JkXEVycm9yUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/Guest/Restoran_Forgot_Password/Forgot_Password.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3Vlc3RcUmVzdG9yYW5fRm9yZ290X1Bhc3N3b3JkXEZvcmdvdF9QYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/Guest/Restoran_Home/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3Vlc3RcUmVzdG9yYW5fSG9tZVxIb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/Guest/Restoran_Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3Vlc3RcUmVzdG9yYW5fTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/Guest/Restoran_Register/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3Vlc3RcUmVzdG9yYW5fUmVnaXN0ZXJcUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/Guest/Restoran_Service/Service.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3Vlc3RcUmVzdG9yYW5fU2VydmljZVxTZXJ2aWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/Guest/Restoran_Team/Team.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3Vlc3RcUmVzdG9yYW5fVGVhbVxUZWFtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/Guest/Restoran_Testimonial/Testimonial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3Vlc3RcUmVzdG9yYW5fVGVzdGltb25pYWxcVGVzdGltb25pYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/Guest/Verify_Email/Verify.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3Vlc3RcVmVyaWZ5X0VtYWlsXFZlcmlmeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PRN231_BL5/PrọectPRN231_BL5/FoodStoreClient/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-x8stc40giv
