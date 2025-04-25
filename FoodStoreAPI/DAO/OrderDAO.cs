@@ -1,7 +1,7 @@
 ﻿using FoodStoreAPI.DTO;
 using FoodStoreAPI.Models;
 using Microsoft.EntityFrameworkCore;
-namespace ProjectPRN231.DAO
+namespace FoodStoreAPI.DAO
 {
     public class OrderDAO
     {
