@@ -1,0 +1,402 @@
+[
+  {
+    "ContainingType": "FoodStoreAPI.Controllers.Admin.AccountController",
+    "Method": "GetAccountSearch",
+    "RelativePath": "api/Account/Admin/Account/Search",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "searchAccount",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[FoodStoreAPI.DTO.AccountLDTO, FoodStoreAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FoodStoreAPI.Controllers.Admin.AccountController",
+    "Method": "GetAccount",
+    "RelativePath": "api/Account/Admin/Accounts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[FoodStoreAPI.DTO.AccountLDTO, FoodStoreAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FoodStoreAPI.Controllers.Admin.AccountController",
+    "Method": "UpdateRoleAccount",
+    "RelativePath": "api/Account/Admin/Update/Account",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "accId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "roleId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreAPI.Controllers.Customer.AccountController",
+    "Method": "findAccountById",
+    "RelativePath": "api/Account/Customer/Account/Profile/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreAPI.Controllers.Customer.AccountController",
+    "Method": "updateInformationAccountById",
+    "RelativePath": "api/Account/Customer/Account/Update/Information",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "accountDTO",
+        "Type": "FoodStoreAPI.DTO.AccountDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreAPI.Controllers.Guest.AccountController",
+    "Method": "changePassword",
+    "RelativePath": "api/Account/Guest/Account/ChangePassword",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pass",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreAPI.Controllers.Guest.AccountController",
+    "Method": "findAccountByUsernameAndEmail",
+    "RelativePath": "api/Account/Guest/Account/ExistAccount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreAPI.Controllers.Guest.AccountController",
+    "Method": "findAccountByEmail",
+    "RelativePath": "api/Account/Guest/Account/ForgotPassword",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreAPI.Controllers.Guest.AccountController",
+    "Method": "Login",
+    "RelativePath": "api/Account/Guest/Account/Login",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "pass",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreAPI.Controllers.Guest.AccountController",
+    "Method": "register",
+    "RelativePath": "api/Account/Guest/Account/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "accountDTO",
+        "Type": "FoodStoreAPI.DTO.AccountDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreAPI.Controllers.Customer.HomeController",
+    "Method": "PostProduct",
+    "RelativePath": "api/Home/Customer/AddProduct",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "product",
+        "Type": "FoodStoreAPI.DTO.ProductDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreAPI.Controllers.Customer.HomeController",
+    "Method": "DeleteProduct",
+    "RelativePath": "api/Home/Customer/Delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreAPI.Controllers.Customer.HomeController",
+    "Method": "GetProductById",
+    "RelativePath": "api/Home/Customer/Details/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreAPI.Controllers.Customer.HomeController",
+    "Method": "GetProduct",
+    "RelativePath": "api/Home/Customer/Products/{cateId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cateId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreAPI.Controllers.Customer.HomeController",
+    "Method": "UpdateProduct",
+    "RelativePath": "api/Home/Customer/Update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "productdto",
+        "Type": "FoodStoreAPI.DTO.ProductDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreAPI.Controllers.Admin.OrderController",
+    "Method": "AddOrder",
+    "RelativePath": "api/Order/Admin/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "order",
+        "Type": "FoodStoreAPI.Models.Order",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreAPI.Controllers.Admin.OrderController",
+    "Method": "DeleteOrder",
+    "RelativePath": "api/Order/Admin/Delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreAPI.Controllers.Admin.OrderController",
+    "Method": "GetAllOrders",
+    "RelativePath": "api/Order/Admin/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreAPI.Controllers.Admin.OrderController",
+    "Method": "getListOrderRevenue",
+    "RelativePath": "api/Order/Admin/OrderCloseCaculate",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dateNow",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "dateSevenDay",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreAPI.Controllers.Admin.OrderController",
+    "Method": "getRevenue",
+    "RelativePath": "api/Order/Admin/RevenueCaculate",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dateNow",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "dateSevenDay",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreAPI.Controllers.Admin.OrderController",
+    "Method": "UpdateOrder",
+    "RelativePath": "api/Order/Admin/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "order",
+        "Type": "FoodStoreAPI.Models.Order",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FoodStoreAPI.Controllers.Guest.HomeController",
+    "Method": "GetProduct",
+    "RelativePath": "Guest/Products/{cateId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cateId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

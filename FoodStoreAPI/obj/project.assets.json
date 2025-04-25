@@ -730,6 +730,19 @@
           }
         }
       },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore/6.2.2": {
         "type": "package",
         "dependencies": {
@@ -2231,6 +2244,36 @@
         "version.txt"
       ]
     },
+    "Newtonsoft.Json/13.0.3": {
+      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/net6.0/Newtonsoft.Json.dll",
+        "lib/net6.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
     "Swashbuckle.AspNetCore/6.2.2": {
       "sha512": "Irw1OHu06kN3KOpLLQvy4pb/K7AjphnaNFWa9AZCEh0CNZ+3Eesqr/WfNzhX6w6om0Y4LEhVmbub83aGAZoguQ==",
       "type": "package",
@@ -3008,6 +3051,7 @@
       "Microsoft.AspNetCore.Identity.UI >= 6.0.32",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.32",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.32",
+      "Newtonsoft.Json >= 13.0.3",
       "Swashbuckle.AspNetCore >= 6.2.2"
     ]
   },
@@ -3081,6 +3125,10 @@
             "target": "Package",
             "version": "[6.0.32, )"
           },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
+          },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.2.2, )"
@@ -3108,5 +3156,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\PRN231_BL5\\PrọectPRN231_BL5\\FoodStoreAPI\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using FoodStoreAPI.DAO;
+using FoodStoreAPI.Models;
 
 namespace FoodStoreAPI.Config
 {
@@ -6,7 +8,7 @@ namespace FoodStoreAPI.Config
     {
         public MapperConfig()
         {
-
+            CreateMap<Account, AccountDAO>().ReverseMap();
         }
     }
 }
