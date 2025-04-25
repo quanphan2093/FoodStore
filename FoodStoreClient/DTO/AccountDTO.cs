@@ -1,4 +1,4 @@
-﻿
+
 namespace FoodStoreClient.DTO
 {
     public class AccountDTO

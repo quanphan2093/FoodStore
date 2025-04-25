@@ -50,7 +50,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FoodStoreAPI\FoodStoreAPI.csproj" />
+    <Folder Include="Pages\Admin\Restoran_Logout\" />
+    <Folder Include="Pages\Ship\" />
+    <Folder Include="Pages\Sale\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -58,6 +60,7 @@
     <Folder Include="Pages\Customer\" />
     <Folder Include="Pages\Guest\" />
     <Folder Include="Pages\Sale\" />
+    <ProjectReference Include="..\FoodStoreAPI\FoodStoreAPI.csproj" />
   </ItemGroup>
 
 </Project>

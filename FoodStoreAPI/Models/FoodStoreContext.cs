@@ -15,7 +15,6 @@ namespace FoodStoreAPI.Models
             {
                 Ins = this;
             }
-
         }
 
         public FoodStoreContext(DbContextOptions<FoodStoreContext> options)
