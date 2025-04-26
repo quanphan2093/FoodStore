@@ -1,7 +1,6 @@
 ﻿@page
-@model FoodStoreClient.Pages.Admin.Restoran_Management_Account.Management_AccountModel
+@model FoodStoreClient.Pages.Admin.Restoran_Management_Category.Management_CategoryModel
 @{
-
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -34,12 +33,18 @@
     <link href="~/css/bootstrap.min.css" rel="stylesheet">
     <!-- Template Stylesheet -->
     <link href="~/css/style.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url('img\\cute-japanese-wallpaper-1920x1080-1.jpg');
+        }
+    </style>
 </head>
 
 <body>
     <div class="container-xxl bg-white p-0">
         <!-- Menu Start -->
-        <div class="container-xxl py-5">
+        <div class="container-xxl py-5" style="background-image: url('@Url.Content("~/img/cute-japanese-wallpaper-1920x1080-1.jpg");">
             <div class="container">
                 <h1>Welcome to view page</h1>
                 <table>
@@ -52,57 +57,34 @@
                         <td></td>
                         <form method="get">
                         <td style="padding-right: 5px; text-align: left;">
-                            <input type="text" value="@Model.searchAccount" name="search" />
-                        </td>
-                        <td style="padding-right: 10px; text-align: left;"><input class="btn btn-primary" type="submit" value="Submit" /></td>
+                            <div>
+                                <input type="text" value="@Model.searchCate" name="search" />
+                                <select name="sort" style="padding-left: 5px;height:29px">
+                                    <option value="all">All</option>
+                                    <option value="asc">Ascending</option>
+                                    <option value="desc">Descending</option>
+                                </select>
+                            </div>
+                        </td>                        
+                        <td style="padding-right: 10px; text-align: left; height:29px"><input class="btn btn-primary" type="submit" value="Submit" /></td>
                         </form>
-                    </tr>
-                    <tr>
-                        <td> 
-
-                        </td>
                     </tr>
                 </table>
                 <table class="table">
                     <tr>
-                        <th>AccId</th>
-                        <th>Avatar</th>
-                        <th>Username</th>
-                        <th>Email</th>
-                        <td>Phone</td>
-                        <th>Create_At</th>
-                        <th>Role</th>
+                        <th>CategoryID</th>
+                        <th>CategoryName</th>
                         <th>Actions</th>
                     </tr>
-                    @foreach (var pro in Model.listAcc)
+                    @foreach (var pro in Model.listCate)
                     {
                         <tr>
-                            <td>@pro.AccId</td>
-                            <td><img class="flex-shrink-0 img-fluid rounded" src="https://i.pinimg.com/1200x/16/b2/e2/16b2e2579118bf6fba3b56523583117f.jpg" style="width: 40px; height: 40px" /></td>
-                            <td>@pro.Username</td>
-                            <td>@pro.Email</td>
-                            <td>@pro.Phone</td>
-                            <td>@(pro.CreateAt.HasValue ? pro.CreateAt.Value.ToString("dd/MM/yyyy") : "")</td>
-                            <td>@pro.RoleName</td>
+                            <td>@pro.CateId</td>                            
+                            <td>@pro.CateName</td>
                             <td>
-                                @if (pro.RoleId == 2)
-                                {
-                                    <a asp-page="/Admin/Restoran_Management_Account/Management_Account_Update" asp-route-customValue="3" asp-route-id="@pro.AccId">Cust</a>
+                                <a asp-page="/Admin/Restoran_Management_Category/Management_Category_Update" asp-route-cateId="@pro.CateId">View</a>
                                     <span>|</span>
-                                    <a asp-page="/Admin/Restoran_Management_Account/Management_Account_Update" asp-route-customValue="4" asp-route-id="@pro.AccId">Sale</a>
-                                }
-                                @if (pro.RoleId == 3)
-                                {
-                                    <a asp-page="/Admin/Restoran_Management_Account/Management_Account_Update" asp-route-customValue="2" asp-route-id="@pro.AccId">Ship</a>
-                                    <span>|</span>
-                                    <a asp-page="/Admin/Restoran_Management_Account/Management_Account_Update" asp-route-customValue="4" asp-route-id="@pro.AccId">Sale</a>
-                                }
-                                @if (pro.RoleId == 4)
-                                {
-                                    <a asp-page="/Admin/Restoran_Management_Account/Management_Account_Update" asp-route-customValue="3" asp-route-id="@pro.AccId">Cust</a>
-                                    <span>|</span>
-                                    <a asp-page="/Admin/Restoran_Management_Account/Management_Account_Update" asp-route-customValue="2" asp-route-id="@pro.AccId">Ship</a>
-                                }
+                                <a asp-page="/Admin/Restoran_Management_Category/Management_Category_Delete" asp-route-cateId="@pro.CateId">Delete</a>
                             </td>
                         </tr>
                     }
@@ -116,7 +98,7 @@
                     @if (Model.CurrentPage > 1)
                     {
                         <li class="page-item">
-                            <a class="page-link" asp-page="./Management_Product" asp-route-pageNumber="@(Model.CurrentPage - 1)" asp-route-statusPage="@Model.status" aria-label="Previous">
+                            <a class="page-link" asp-page="./Management_Category" asp-route-pageNumber="@(Model.CurrentPage - 1)" asp-route-statusPage="@Model.status" aria-label="Previous">
                                 <span aria-hidden="true">&laquo;</span>
                                 <span class="visually-hidden">Previous</span>
                             </a>
@@ -126,7 +108,7 @@
                     @for (var i = 1; i <= Model.TotalPages; i++)
                     {
                         <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
-                            <a class="page-link" asp-page="./Management_Product" asp-route-pageNumber="@i" asp-route-statusPage="@Model.status">@i</a>
+                            <a class="page-link" asp-page="./Management_Category" asp-route-pageNumber="@i" asp-route-statusPage="@Model.status">@i</a>
                         </li>
                     }
 

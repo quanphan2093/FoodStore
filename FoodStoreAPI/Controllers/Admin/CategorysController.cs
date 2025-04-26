@@ -21,15 +21,33 @@ namespace FoodStoreAPI.Controllers.Admin
         }
 
         [HttpGet("Admin/Categorys")]
-        public ActionResult<IEnumerable<CategoryDTO>> GetCategory()
+        public ActionResult<IEnumerable<CategoryDTO>> GetCategory([FromQuery] string? search, [FromQuery] string? sort)
         {
             try
             {
-                var categories = _context.Categories.Select(x => new CategoryDTO
+                var query = _context.Categories.AsQueryable();
+
+                // Tìm kiếm nếu có từ khóa và khác "all"
+                if (!string.IsNullOrWhiteSpace(search) && search.ToLower() != "all")
+                {
+                    query = query.Where(x => x.CateName.ToLower().Contains(search.ToLower()));
+                }
+
+                // Sắp xếp nếu có yêu cầu và khác "all"
+                if (!string.IsNullOrWhiteSpace(sort) && sort.ToLower() != "all")
+                {
+                    if (sort.ToLower() == "asc")
+                        query = query.OrderBy(x => x.CateName);
+                    else if (sort.ToLower() == "desc")
+                        query = query.OrderByDescending(x => x.CateName);
+                }
+
+                var categories = query.Select(x => new CategoryDTO
                 {
                     CateId = x.CateId,
                     CateName = x.CateName
                 }).ToList();
+
                 return Ok(categories);
             }
             catch (Exception ex)
@@ -37,7 +55,6 @@ namespace FoodStoreAPI.Controllers.Admin
                 return BadRequest(ex.Message);
             }
         }
-
         [HttpGet("Admin/Categorys/{id}")]
         public ActionResult GetCategoryById(int id)
         {
