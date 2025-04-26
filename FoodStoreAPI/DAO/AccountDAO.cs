@@ -2,8 +2,11 @@
 using FoodStoreAPI.DTO;
 using FoodStoreAPI.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Net.NetworkInformation;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace FoodStoreAPI.DAO
 {
@@ -119,8 +122,6 @@ namespace FoodStoreAPI.DAO
             }
             return listAccount;
         }
-
-
         public static List<AccountLDTO> getAccountSearch(string searchAccount)
         {
             FoodStoreContext context = new FoodStoreContext();
@@ -234,5 +235,61 @@ namespace FoodStoreAPI.DAO
             }
             return account;
         }
+
+        public static void AddNewUser(AccountDTO accountdto)
+        {
+            var isEmailExisted = FoodStoreContext.Ins.Accounts.Any(x => x.Email.Equals(accountdto.Email));
+            if (isEmailExisted)
+            {
+                throw new ArgumentException("Email is existed!");
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(accountdto.Name))
+                {
+                    throw new ArgumentException("Your name must be valid!");
+                }
+                else
+                {
+                    if (!Regex.IsMatch(accountdto.Email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+                    {
+                        throw new ArgumentException("Invalid email or email early exist!");
+                    }
+                    else
+                    {
+                        if (accountdto.Phone.Length != 10 && !Regex.IsMatch(accountdto.Phone, @"^(03|05|07|08|09)\d{8}$"))
+                        {
+                            throw new ArgumentException("Phone number must be 10 digits, and have a matching prefix!");
+                        }
+                        else
+                        {
+                            bool isValidPassword = accountdto.Password.Length > 8 && Regex.IsMatch(accountdto.Password, @"^[A-Z]") && Regex.IsMatch(accountdto.Password, @"\d") && Regex.IsMatch(accountdto.Password, @"[!@#$%^&*(),.?:{}|<>]");
+                            if (string.IsNullOrEmpty(accountdto.Password) || !isValidPassword)
+                            {
+                                throw new ArgumentException("Password must be at least 8 digits, must have an uppercase letter at the beginning of the string, must have at least one number, and must have at least one special character!");
+                            }
+                            else
+                            {
+                                Account account = new Account
+                                {
+                                    Email = accountdto.Email,
+                                    Phone = accountdto.Phone,
+                                    Name = accountdto.Name,
+                                    Username = accountdto.Username,
+                                    Password = HashPassword(accountdto.Password),
+                                    CreateAt = DateTime.Now,
+                                    RoleId = accountdto.RoleId,
+                                    Address = accountdto.Address
+                                };
+                                var context = FoodStoreContext.Ins;
+                                context.Accounts.Add(account);
+                                context.SaveChanges();
+                            }
+                        }
+                    }
+                }                  
+            }            
+        }
+
     }
 }

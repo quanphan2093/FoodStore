@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using FoodStoreAPI.DAO;
 using FoodStoreAPI.DTO;
+using System.Text.RegularExpressions;
+using System.Numerics;
 
 namespace FoodStoreAPI.Controllers.Admin
 {
@@ -27,5 +29,17 @@ namespace FoodStoreAPI.Controllers.Admin
             return Ok();
         }
 
+        [HttpPost("Admin/AddNewUser/Account")]
+        public ActionResult AddNewUser([FromBody] AccountDTO account)
+        {
+             AccountDAO.AddNewUser(account);
+            return Ok();
+        }
+
+        [HttpGet("Admin/AccountDetail/Account/{id}")]
+        public ActionResult findAccount(int id)
+        {
+            return Ok(AccountDAO.findAccountById(id));
+        }
     }
 }

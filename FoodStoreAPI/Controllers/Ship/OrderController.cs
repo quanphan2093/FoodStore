@@ -1,8 +1,6 @@
 ﻿using FoodStoreAPI.DAO;
 using FoodStoreAPI.DTO;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using ProjectPRN231.DAO;
 
 namespace FoodStoreAPI.Controllers.Ship
 {
