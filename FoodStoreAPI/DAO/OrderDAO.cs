@@ -599,6 +599,28 @@ namespace FoodStoreAPI.DAO
             }
         }
 
+        public static List<OrderLDTO> GetAllOrderAdmin()
+        {
+            using (var context = new FoodStoreContext())
+            {
+                return context.Orders
+                    .Include(x => x.Customer)
+                    .Select(x => new OrderLDTO
+                    {
+                        OrderId = x.OrderId,
+                        CustomerId = x.CustomerId,
+                        CustomerName = x.Customer != null ? x.Customer.Name : "", 
+                        Gtotal = x.Gtotal,
+                        Status = x.Status,
+                        OrderDate = x.OrderDate,
+                        CreateAt = x.CreateAt
+                    })
+                    .ToList();
+            }
+        }
+
+
+
         public static bool Add(Order order)
         {
             using var db = new FoodStoreContext();
@@ -624,10 +646,33 @@ namespace FoodStoreAPI.DAO
         public static bool Delete(int id)
         {
             using var db = new FoodStoreContext();
-            var order = db.Orders.Find(id);
+            var order = db.Orders.FirstOrDefault(o => o.OrderId == id);
             if (order == null) return false;
-            db.Orders.Remove(order);
+
+            order.Status = "Deleted";
+            order.UpdateAt = DateTime.Now;
+            db.Orders.Update(order);
+
             return db.SaveChanges() > 0;
         }
+
+        public static List<OrderLDTO> SearchByCustomerName(string customerName)
+        {
+            using var context = new FoodStoreContext();
+            return context.Orders
+                .Include(x => x.Customer)
+                .Where(x => x.Customer.Name.Contains(customerName))
+                .Select(x => new OrderLDTO
+                {
+                    OrderId = x.OrderId,
+                    CustomerId = x.CustomerId,
+                    CustomerName = x.Customer.Name,
+                    Gtotal = x.Gtotal,
+                    Status = x.Status,
+                    OrderDate = x.OrderDate,
+                    CreateAt = x.CreateAt
+                }).ToList();
+        }
+
     }
 }

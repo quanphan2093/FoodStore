@@ -24,7 +24,7 @@ namespace FoodStoreAPI.Controllers.Admin
         [HttpGet("Admin/GetAll")]
         public IActionResult GetAllOrders()
         {
-            var orders = OrderDAO.GetAllOrders();
+            var orders = OrderDAO.GetAllOrderAdmin();
             return Ok(orders);
         }
         // POST: Thêm đơn hàng
@@ -57,7 +57,14 @@ namespace FoodStoreAPI.Controllers.Admin
         public IActionResult DeleteOrder(int id)
         {
             var result = OrderDAO.Delete(id);
-            return result ? Ok("Deleted") : BadRequest("Failed");
+            return result ? Ok("Deleted") : BadRequest("Failed");   
+        }
+
+        [HttpGet("Admin/SearchByCustomerName")]
+        public IActionResult SearchByCustomerName(string name)
+        {
+            var orders = OrderDAO.SearchByCustomerName(name);
+            return Ok(orders);
         }
 
     }
