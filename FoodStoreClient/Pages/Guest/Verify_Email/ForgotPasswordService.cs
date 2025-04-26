@@ -16,14 +16,14 @@ namespace FoodStoreClient.Pages.Guest.Verify_Email
         {
             var smtpSettings = _configuration.GetSection("SmtpSettings");
 
-            var smtpClient = new SmtpClient(smtpSettings["Server"])
+            var smtpClient = new SmtpClient(smtpSettings["SmtpServer"])
             {
                 Port = int.Parse(smtpSettings["Port"]),
                 Credentials = new NetworkCredential(smtpSettings["Username"], smtpSettings["Password"]),
                 EnableSsl = bool.Parse(smtpSettings["UseSSL"]),
             };
 
-            var verificationUrl = $"http://localhost:5156/Guest/Restoran_Forgot_Password/Change_Password?email={toEmail}";
+            var verificationUrl = $"http://localhost:5128/Guest/Restoran_Forgot_Password/Change_Password?email={toEmail}";
 
             var mailMessage = new MailMessage
             {

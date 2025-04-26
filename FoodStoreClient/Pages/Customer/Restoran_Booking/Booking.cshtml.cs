@@ -1,10 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Net.Http.Headers;
 
-namespace FoodStoreClient.Pages.Customer.Restoran_Home
+namespace FoodStoreClient.Pages.Customer.Restoran_Booking
 {
-    public class HomeModel : PageModel
+    public class BookingModel : PageModel
     {
         public void OnGet()
         {
