@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace FoodStoreAPI.Pages.Customer.Restoran_Product_Detail
+namespace FoodStoreClient.Pages.Customer.Restoran_Product_Detail
 {
     public class Product_DetailModel : PageModel
     {
