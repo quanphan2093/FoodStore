@@ -43,7 +43,7 @@ namespace FoodStoreClient.Pages.Ship.Resstoran_Change_Password
             if (!response.IsSuccessStatusCode)
             {
                 TempData["ErrorMessage"] = "Account not found!";
-                return RedirectToPage("/Sale/Restoran_Change_Password/Change_Passwords");
+                return RedirectToPage("/Ship/Resstoran_Change_Password/Change_Passwords");
             }
 
             var responseBody = await response.Content.ReadAsStringAsync();
@@ -52,7 +52,7 @@ namespace FoodStoreClient.Pages.Ship.Resstoran_Change_Password
             if (!int.TryParse(accId, out int accountId))
             {
                 TempData["ErrorMessage"] = "Invalid account!";
-                return RedirectToPage("/Sale/Restoran_Change_Password/Change_Passwords");
+                return RedirectToPage("/Ship/Resstoran_Change_Password/Change_Passwords");
             }
 
             string hashedOldPassword = HashPasswordSHA256(old_password);
@@ -98,7 +98,7 @@ namespace FoodStoreClient.Pages.Ship.Resstoran_Change_Password
             TempData["Old_password"] = old_password;
             TempData["Password"] = password;
             TempData["Re_Password"] = re_password;
-            return RedirectToPage("/Sale/Restoran_Change_Password/Change_Passwords");
+            return RedirectToPage("/Ship/Resstoran_Change_Password/Change_Passwords");
         }
         private string HashPasswordSHA256(string password)
         {

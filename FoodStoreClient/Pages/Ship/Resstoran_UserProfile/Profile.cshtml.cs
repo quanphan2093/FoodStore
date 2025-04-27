@@ -79,9 +79,9 @@ namespace FoodStoreClient.Pages.Ship.Resstoran_UserProfile
                 {
                     TempData["ErrorMessage"] = "Invalid phone number!";
                 }
-                else if (address.Length <= 20)
+                else if (address.Length <= 0)
                 {
-                    TempData["ErrorMessage"] = "Address must be complete and longer than 20 characters!";
+                    TempData["ErrorMessage"] = "Address must be complete and longer than 10 characters!";
                 }
                 else
                 {
