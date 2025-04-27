@@ -9,7 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddHttpClient();
 
+
 // Cấu hình Session
+
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddTransient<EmailService>();
 builder.Services.AddTransient<ForgotPasswordService>();

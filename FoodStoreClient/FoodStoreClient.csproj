@@ -7,6 +7,36 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\img\about-1.jpg" />
+    <Content Remove="wwwroot\img\about-2.jpg" />
+    <Content Remove="wwwroot\img\about-3.jpg" />
+    <Content Remove="wwwroot\img\about-4.jpg" />
+    <Content Remove="wwwroot\img\avatar.jpg" />
+    <Content Remove="wwwroot\img\bg-hero.jpg" />
+    <Content Remove="wwwroot\img\Cute-Japanese-Wallpaper-1920x1080-1.jpg" />
+    <Content Remove="wwwroot\img\Food_background.jpg" />
+    <Content Remove="wwwroot\img\hero.png" />
+    <Content Remove="wwwroot\img\menu-1.jpg" />
+    <Content Remove="wwwroot\img\menu-2.jpg" />
+    <Content Remove="wwwroot\img\menu-3.jpg" />
+    <Content Remove="wwwroot\img\menu-4.jpg" />
+    <Content Remove="wwwroot\img\menu-5.jpg" />
+    <Content Remove="wwwroot\img\menu-6.jpg" />
+    <Content Remove="wwwroot\img\menu-7.jpg" />
+    <Content Remove="wwwroot\img\menu-8.jpg" />
+    <Content Remove="wwwroot\img\team-1.jpg" />
+    <Content Remove="wwwroot\img\team-2.jpg" />
+    <Content Remove="wwwroot\img\team-3.jpg" />
+    <Content Remove="wwwroot\img\team-4.jpg" />
+    <Content Remove="wwwroot\img\testimonial-1.jpg" />
+    <Content Remove="wwwroot\img\testimonial-2.jpg" />
+    <Content Remove="wwwroot\img\testimonial-3.jpg" />
+    <Content Remove="wwwroot\img\testimonial-4.jpg" />
+    <Content Remove="wwwroot\img\toys_and_food_hd_kawaii-1920x1080.jpg" />
+    <Content Remove="wwwroot\img\video.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="wwwroot\js\site.js" />
     <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
     <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
@@ -50,7 +80,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Admin\" />
+    <Folder Include="Pages\Admin\Restoran_Logout\" />
     <Folder Include="Pages\Ship\" />
   </ItemGroup>
 
@@ -59,7 +89,41 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Pages\Admin\" />
+    <Folder Include="Pages\Customer\" />
+    <Folder Include="Pages\Guest\" />
+    <Folder Include="Pages\Sale\" />
     <ProjectReference Include="..\FoodStoreAPI\FoodStoreAPI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="wwwroot\img\about-1.jpg" />
+    <Resource Include="wwwroot\img\about-2.jpg" />
+    <Resource Include="wwwroot\img\about-3.jpg" />
+    <Resource Include="wwwroot\img\about-4.jpg" />
+    <Resource Include="wwwroot\img\avatar.jpg" />
+    <Resource Include="wwwroot\img\bg-hero.jpg" />
+    <Resource Include="wwwroot\img\Cute-Japanese-Wallpaper-1920x1080-1.jpg" />
+    <Resource Include="wwwroot\img\Food_background.jpg" />
+    <Resource Include="wwwroot\img\hero.png" />
+    <Resource Include="wwwroot\img\menu-1.jpg" />
+    <Resource Include="wwwroot\img\menu-2.jpg" />
+    <Resource Include="wwwroot\img\menu-3.jpg" />
+    <Resource Include="wwwroot\img\menu-4.jpg" />
+    <Resource Include="wwwroot\img\menu-5.jpg" />
+    <Resource Include="wwwroot\img\menu-6.jpg" />
+    <Resource Include="wwwroot\img\menu-7.jpg" />
+    <Resource Include="wwwroot\img\menu-8.jpg" />
+    <Resource Include="wwwroot\img\team-1.jpg" />
+    <Resource Include="wwwroot\img\team-2.jpg" />
+    <Resource Include="wwwroot\img\team-3.jpg" />
+    <Resource Include="wwwroot\img\team-4.jpg" />
+    <Resource Include="wwwroot\img\testimonial-1.jpg" />
+    <Resource Include="wwwroot\img\testimonial-2.jpg" />
+    <Resource Include="wwwroot\img\testimonial-3.jpg" />
+    <Resource Include="wwwroot\img\testimonial-4.jpg" />
+    <Resource Include="wwwroot\img\toys_and_food_hd_kawaii-1920x1080.jpg" />
+    <Resource Include="wwwroot\img\video.jpg" />
   </ItemGroup>
 
 </Project>
