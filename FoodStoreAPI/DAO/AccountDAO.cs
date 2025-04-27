@@ -137,9 +137,7 @@ namespace FoodStoreAPI.DAO
                 {
                     searchAccount = searchAccount.ToLower();
                     query = query.Where(x =>
-                        x.Username.ToLower().Contains(searchAccount) ||
-                        x.AccId.ToString().Contains(searchAccount) ||
-                        x.RoleId.ToString().Contains(searchAccount) ||
+                        x.Username.ToLower().Contains(searchAccount.ToLower()) ||
                         x.Email.ToLower().Contains(searchAccount) ||
                         x.Phone.Contains(searchAccount)
                     );
