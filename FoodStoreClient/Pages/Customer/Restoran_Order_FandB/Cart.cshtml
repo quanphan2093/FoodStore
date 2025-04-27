@@ -54,15 +54,16 @@
                     <tbody>
                         @foreach (var order in Model.listOrder)
                         {
-                            @if (order.Status == "Pending")
+                            if (order.Status == "Pending")
                             {
-                                @foreach (var orderItem in Model.listOrderItems)
+                                foreach (var orderItem in Model.listOrderItems)
                                 {
                                     if (order.OrderId == orderItem.OrderId)
                                     {
                                         <tr>
                                             <td style="width: 5%; text-align: center;">
-                                                <input type="checkbox" class="item-checkbox" data-price="@orderItem.Product.Price * @orderItem.Quantity" />
+                                                <input type="checkbox" class="item-checkbox"
+                                                       data-price="@(orderItem.Product.Price * orderItem.Quantity)" />
                                             </td>
                                             <td style="width: 20%;">
                                                 <img src="@orderItem.Product.Images" alt="Product" class="img-fluid" style="width: 50px;">
@@ -100,6 +101,10 @@
                         </tr>
                     </tfoot>
                 </table>
+                <div class="col-12" id="qrSection" style="display: block; text-align: center;">
+                    <h4>Mã QR Thanh Toán</h4>
+                    <img id="qrCodeImage" src="" alt="VietQR Code" style="max-width: 200px;" />
+                </div>
             </div>
         </div>
     </div>
@@ -134,15 +139,66 @@
                 let total = 0;
                 checkboxes.forEach(checkbox => {
                     if (checkbox.checked) {
-                        total += parseFloat(checkbox.getAttribute('data-price'))*;
+                        total += parseFloat(checkbox.getAttribute('data-price')) || 0;
                     }
                 });
                 totalDisplay.textContent = new Intl.NumberFormat().format(total);
             }
         });
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const checkboxes = document.querySelectorAll('.item-checkbox');
+            const totalDisplay = document.getElementById('selectedTotal');
+            const qrSection = document.getElementById('qrSection');
+            const qrCodeImage = document.getElementById('qrCodeImage');
 
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function () {
+                    updateTotalAndQR();
+                });
+            });
 
+            function updateTotalAndQR() {
+                let total = 0;
+                checkboxes.forEach(checkbox => {
+                    if (checkbox.checked) {
+                        total += parseFloat(checkbox.getAttribute('data-price')) || 0;
+                    }
+                });
+                totalDisplay.textContent = new Intl.NumberFormat().format(total);
+
+                if (total > 0) {
+                    generateQR(total);
+                } else {
+                    qrCodeImage.src = "";
+                }
+            }
+
+            function generateQR(amount) {
+                var account = "0824530346";
+                var bank = "MB";
+                var description = "Thanh toán đơn hàng";
+
+                var qrUrl = `http://localhost:7031/api/VietQR/generate?account=${account}&bank=${bank}&amount=${amount}&description=${encodeURIComponent(description)}`;
+
+                fetch(qrUrl)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error("Không thể lấy QR");
+                        }
+                        return response.blob();
+                    })
+                    .then(blob => {
+                        qrCodeImage.src = URL.createObjectURL(blob);
+                    })
+                    .catch(error => {
+                        console.error("Lỗi tải QR:", error);
+                        qrCodeImage.src = "";
+                    });
+            }
+        });
+    </script>
 
     <script>
         function calculateTotal() {
