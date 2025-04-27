@@ -57,18 +57,16 @@
                         <td style="padding-right: 5px; text-align: left;">
                             <input type="text" value="@Model.searchAccount" name="search" />
                         </td>
-
                         <td>
-                            <select>
-                                <option value="all"></option>
-                                <option value="fullnameAsc"> Fullname ASC</option>
-                                <option value="fullnameDesc">Fullname DESC</option>
-                                <option value="emailAsc"> Email ASC</option>
-                                <option value="emailDESC">Email DESC</option>
+                            <select name="sortBy" style="padding-left: 5px;height:29px">
+                                <option name="sortBy"  value="All">All</option>
+                                <option name="sortBy"  value="fullnameAsc"> Fullname ASC</option>
+                                <option name="sortBy"  value="fullnameDesc">Fullname DESC</option>
+                                <option name="sortBy" value="emailAsc"> Email ASC</option>
+                                <option name="sortBy"  value="emailDESC">Email DESC</option>
                             </select>
                         </td>
-
-                        <td style="padding-right: 10px; text-align: left;"><input class="btn btn-primary" type="submit" value="Submit" /></td>
+                        <td style="padding-right: 10px; text-align: left;"><input class="btn btn-primary" type="submit" value="Search" /></td>
                         </form>
                     </tr>
                     <tr>

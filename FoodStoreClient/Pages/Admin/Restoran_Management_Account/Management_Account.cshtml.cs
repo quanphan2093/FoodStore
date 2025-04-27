@@ -18,12 +18,13 @@ namespace FoodStoreClient.Pages.Admin.Restoran_Management_Account
         public int PageSize { get; set; } = 5;
         public string status { get; set; } = "";
         public string searchAccount { get; set; } = "";
+        public string sort { get; set; } = "";
         public Management_AccountModel()
         {
             client = new HttpClient();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
-        public async Task<IActionResult> OnGet(int? pageNumber, string? search)
+        public async Task<IActionResult> OnGet(int? pageNumber, string? search, string? sortBy)
         {
             string accId = HttpContext.Session.GetString("accId");
             if (accId == null)
@@ -32,14 +33,15 @@ namespace FoodStoreClient.Pages.Admin.Restoran_Management_Account
             }
             int total = 0;
             searchAccount = search;
+            sort = sortBy;
             CurrentPage = pageNumber ?? 10;
             try
             {
                 string requestUrl;
 
-                if (!string.IsNullOrWhiteSpace(searchAccount))
+                if (!string.IsNullOrWhiteSpace(searchAccount) || !string.IsNullOrWhiteSpace(sort))
                 {
-                    requestUrl = $"{AccountSearchApiUrl}?searchAccount={searchAccount}";
+                    requestUrl = $"{AccountSearchApiUrl}?searchAccount={searchAccount}&sort={sort}";
                 }
                 else
                 {

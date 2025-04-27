@@ -18,9 +18,9 @@ namespace FoodStoreAPI.Controllers.Admin
         }
 
         [HttpGet("Admin/Account/Search")]
-        public ActionResult<IEnumerable<AccountLDTO>> GetAccountSearch(string searchAccount)
+        public ActionResult<IEnumerable<AccountLDTO>> GetAccountSearch(string searchAccount, string sort)
         {
-            return AccountDAO.getAccountSearch(searchAccount);
+            return AccountDAO.getAccountSearch(searchAccount, sort);
         }
 
         [HttpPut("Admin/Update/Account")]
