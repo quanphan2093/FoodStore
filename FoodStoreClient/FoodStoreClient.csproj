@@ -37,6 +37,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Pages\Sale\Resstoran_UserProfile\Profile.cshtml" />
+    <None Include="Pages\Sale\Restoran_Change_Password\Change_Passwords.cshtml" />
     <None Include="wwwroot\js\site.js" />
     <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
     <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
@@ -92,7 +94,6 @@
     <Folder Include="Pages\Admin\" />
     <Folder Include="Pages\Customer\" />
     <Folder Include="Pages\Guest\" />
-    <Folder Include="Pages\Sale\" />
     <ProjectReference Include="..\FoodStoreAPI\FoodStoreAPI.csproj" />
   </ItemGroup>
 

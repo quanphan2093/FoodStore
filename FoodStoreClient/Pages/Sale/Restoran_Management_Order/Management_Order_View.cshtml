@@ -102,7 +102,7 @@
                         <div class="mt-4">
                             <a href="/Sale/Restoran_Management_Order/Management_Order" class="btn btn-primary">Return Page List Order</a>
 
-                            @if (Model.Order.Status == "Received" || Model.Order.Status == "Delivery Failed")
+                            @if (Model.Order.Status == "Successful Delivery" || Model.Order.Status == "Delivery Failed")
                             {
                                 <form method="post">
                                     <input type="hidden" name="orderId" value="@Model.Order.OrderId" />

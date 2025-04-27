@@ -71,11 +71,10 @@ namespace FoodStoreClient.Pages.Sale.Restoran_Management_Order
                     TempData["ErrorMessage"] = "API trả về dữ liệu rỗng.";
                     return Page();
                 }
-
-               
-                listOrder = JsonSerializer.Deserialize<List<OrderDTO>>(responseBody, new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new List<OrderDTO>();
+                var jsonDoc = JsonDocument.Parse(responseBody);
+                var valuesJson = jsonDoc.RootElement.GetProperty("$values").ToString();
+                listOrder = JsonSerializer.Deserialize<List<OrderDTO>>(valuesJson, new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new List<OrderDTO>();
                 totalOrders = listOrder.Count;
-
             }
             catch (JsonException ex)
             {
