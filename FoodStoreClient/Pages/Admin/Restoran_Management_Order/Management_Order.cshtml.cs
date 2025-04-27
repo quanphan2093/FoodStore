@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using FoodStoreClient.Models;
 using System.Net.Http.Headers;
 using System.Text.Json;
+using FoodStoreAPI.DTO;
 
 namespace FoodStoreClient.Pages.Admin.Restoran_Management_Order
 {
@@ -16,8 +17,9 @@ namespace FoodStoreClient.Pages.Admin.Restoran_Management_Order
         public DateTime? datePast { get; set; } = DateTime.Now.AddYears(-2);
         public DateTime? dateSevenDay { get; set; } = new DateTime(2024, 4, 1);
 
-        public List<Order> Orders { get; set; } = new List<Order>();
-        public List<Order> FilteredOrders { get; set; } = new List<Order>();
+        public List<OrderLDTO> Orders { get; set; } = new List<OrderLDTO>();
+
+        public List<OrderLDTO> FilteredOrders { get; set; } = new List<OrderLDTO>();
 
         public Management_OrderModel()
         {
@@ -66,9 +68,7 @@ namespace FoodStoreClient.Pages.Admin.Restoran_Management_Order
                     var responseBody = await response.Content.ReadAsStringAsync();
                     var jsonDoc = JsonDocument.Parse(responseBody);
                     var valuesJson = jsonDoc.RootElement.GetProperty("$values").ToString();
-                    Orders = JsonSerializer.Deserialize<List<Order>>(valuesJson, new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new List<Order>();
-                    Console.WriteLine(">>> Orders loaded from API: " + Orders.Count);
-
+                    Orders = JsonSerializer.Deserialize<List<OrderLDTO>>(valuesJson, new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) ?? new List<OrderLDTO>();
                 }
                 else
                 {
@@ -81,15 +81,27 @@ namespace FoodStoreClient.Pages.Admin.Restoran_Management_Order
             }
         }
 
-        private List<Order> FilterOrders(DateTime? fromDate, DateTime? toDate)
+
+
+        public List<OrderLDTO> FilterOrders(DateTime? fromDate, DateTime? toDate)
         {
-            if (fromDate == null || toDate == null)
-                return Orders;
-
             return Orders
-                .Where(o => o.OrderDate.HasValue && o.OrderDate.Value.Date >= fromDate.Value.Date && o.OrderDate.Value.Date <= toDate.Value.Date)
-                .ToList();
-
+                .Where(x => x.OrderDate >= fromDate && x.OrderDate <= toDate)
+                .Select(x => new OrderLDTO
+                {
+                    OrderId = x.OrderId,
+                    CustomerId = x.CustomerId,
+                    CustomerName = x.CustomerName,
+                    Gtotal = x.Gtotal,
+                    Status = x.Status,
+                    OrderDate = x.OrderDate,
+                    CreateAt = x.CreateAt
+                }).ToList();
         }
+
+
+
+
+
     }
 }
