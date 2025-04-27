@@ -489,7 +489,6 @@ namespace FoodStoreAPI.DAO
             }
             return list;
         }
-
         public static Order GetLastOrder()
         {
             FoodStoreContext context = new FoodStoreContext();
@@ -1139,7 +1138,5 @@ namespace FoodStoreAPI.DAO
                 })
                 .ToList();
         }
-
     }
 }
-

@@ -1,11 +1,8 @@
-﻿using FoodStoreAPI.DTO;
-using FoodStoreAPI.Models;
-using Microsoft.EntityFrameworkCore;
-
-namespace FoodStoreAPI.DAO
+﻿namespace FoodStoreAPI.DAO
 {
     public class ProductDAO
     {
+
 
         public static List<Product> GetProduct(int categoryId)
         {
@@ -573,8 +570,3 @@ n
         }
     }
 }
-
-
-
-    
-

@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -82,10 +82,7 @@
   <ItemGroup>
     <Folder Include="Pages\Admin\Restoran_Logout\" />
     <Folder Include="Pages\Ship\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="EPPlus" Version="6.2.19" />
+    <Folder Include="Pages\Sale\" />
   </ItemGroup>
 
   <ItemGroup>

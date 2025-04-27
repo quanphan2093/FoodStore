@@ -1,11 +1,8 @@
-﻿using FoodStoreAPI.Models;
 using FoodStoreClient.Pages.Guest.Verify_Email;
-using Microsoft.EntityFrameworkCore;
-
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Thêm dịch vụ Razor Pages & HttpClient
+// Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddHttpClient();
 
@@ -13,40 +10,28 @@ builder.Services.AddHttpClient();
 // Cấu hình Session
 
 builder.Services.AddDistributedMemoryCache();
+
 builder.Services.AddTransient<EmailService>();
 builder.Services.AddTransient<ForgotPasswordService>();
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(30); // Thời gian hết hạn session
+    options.IdleTimeout = TimeSpan.FromMinutes(30); 
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
-builder.Services.AddDbContext<FoodStoreContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("value")));
-
 var app = builder.Build();
 
-// Cấu hình Middleware
+// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
 }
 app.UseStaticFiles();
-app.UseRouting();
-
-// Kích hoạt Session
 app.UseSession();
+app.UseRouting();
 
 app.UseAuthorization();
 
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapRazorPages();
-    endpoints.MapGet("/", context =>
-    {
-        context.Response.Redirect("/Guest/Restoran_Login/Login");
-        return Task.CompletedTask;
-    });
-});
+app.MapRazorPages();
 
 app.Run();
