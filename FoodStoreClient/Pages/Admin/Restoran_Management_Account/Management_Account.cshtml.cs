@@ -80,5 +80,35 @@ namespace FoodStoreClient.Pages.Admin.Restoran_Management_Account
             TotalPages = (int)Math.Ceiling(total / (double)PageSize);
             return Page();
         }
+
+        public async Task<IActionResult> OnPostAsync(string accountId)
+        {
+            try
+            {
+                int accId = int.Parse(accountId);
+                //using var httpClient = new HttpClient();
+                var UpdateApiUrl = "http://localhost:7031/Account/api/Admin/Update/Account";
+
+                var requestCheckUrl = $"{UpdateApiUrl}?accId={accId}&roleId=5";
+                var responseCheck = await client.PutAsync(requestCheckUrl, null);
+
+                if (responseCheck.IsSuccessStatusCode)
+                {
+                    TempData["ErrorMessage"] = "Cập nhật tài khoản thành công!";
+                    return RedirectToPage("/Admin/Restoran_Management_Account/Management_Account"); // về lại trang danh sách
+                }
+                else
+                {
+                    var errorContent = await responseCheck.Content.ReadAsStringAsync();
+                    TempData["ErrorMessage"] = "Cập nhật thất bại: " + errorContent;
+                    return Page();
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = "Lỗi trong quá trình cập nhật!";
+                return Page();
+            }
+        }
     }
 }
