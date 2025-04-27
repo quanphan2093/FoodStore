@@ -124,7 +124,7 @@ namespace FoodStoreAPI.DAO
             }
             return listAccount;
         }
-        public static List<AccountLDTO> getAccountSearch(string searchAccount)
+        public static List<AccountLDTO> getAccountSearch(string searchAccount, string sort)
         {
             FoodStoreContext context = new FoodStoreContext();
             var listAccount = new List<AccountLDTO>();

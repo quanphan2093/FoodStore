@@ -68,7 +68,7 @@
                         <form method="post">
                             <div class="row">
                                 <div class="col-md-5">
-                                    <label for="Username" class="form-label">from:</label>
+                                    <label for="Username" class="form-label">From:</label>
                                     <input type="date" class="form-control" id="fromDate" name="from"
                                            max="@Model.dateNow?.ToString("yyyy-MM-dd")"
                                            min="@Model.datePast?.ToString("yyyy-MM-dd")"
@@ -83,8 +83,10 @@
                                 </div>
                                 <div class="col-md-2">
                                     <label></label>
-                                    <input type="submit" class="btn btn-primary py-2 px-4" style="margin-top: 5px" value="Filter">
+                                    <input type="submit" name="action" value="filter" class="btn btn-primary py-2 px-4" style="margin-top: 5px" value="Filter">
+                                    <input type="submit" name="action" value="export" class="btn btn-primary py-2 px-4" style="margin-top: 5px" value="ExportFile">
                                 </div>
+                                
                         </form>
                     </div>
                     @if (Model.revenue != null)
