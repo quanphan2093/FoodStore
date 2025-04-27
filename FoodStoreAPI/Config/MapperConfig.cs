@@ -11,6 +11,8 @@ namespace FoodStoreAPI.Config
         public MapperConfig()
         {
             CreateMap<Account, AccountDAO>().ReverseMap();
+            CreateMap<Account, AccountLDTO>().ReverseMap();
+            CreateMap<AccountLDTO, Account>().ReverseMap();
 
            
 

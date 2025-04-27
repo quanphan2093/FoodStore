@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Net.Http.Headers;
 
-namespace FoodStoreAPI.Pages.Customer.Restoran_Home
+namespace FoodStoreClient.Pages.Customer.Restoran_Home
 {
     public class HomeModel : PageModel
     {

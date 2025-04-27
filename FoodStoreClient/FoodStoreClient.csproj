@@ -86,6 +86,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Pages\Admin\" />
     <Folder Include="Pages\Customer\" />
     <Folder Include="Pages\Guest\" />
     <Folder Include="Pages\Sale\" />

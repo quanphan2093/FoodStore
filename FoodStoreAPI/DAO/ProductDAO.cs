@@ -21,12 +21,16 @@ namespace FoodStoreAPI.DAO
             return listProduct;
         }
 
-        public static void saveProduct(ProductDTO pro)
+
+        
+
+        public static bool saveProduct(ProductDTO pro)
         {
             try
             {
                 Category category = FoodStoreContext.Ins.Categories.SingleOrDefault(x => x.CateId == pro.CateId);
                 Account account = FoodStoreContext.Ins.Accounts.SingleOrDefault(x => x.AccId == pro.AccId);
+
                 if (category != null && account != null)
                 {
                     Product product = new Product
@@ -45,14 +49,18 @@ namespace FoodStoreAPI.DAO
                         CreateAt = DateTime.Now
                     };
                     FoodStoreContext.Ins.Products.Add(product);
-                    FoodStoreContext.Ins.SaveChanges();
+                    int rows = FoodStoreContext.Ins.SaveChanges();
+                    return rows > 0;
                 }
+                return false;
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                Console.WriteLine("Fail to add Product");
+                return false;
             }
         }
+
 
         public static ProductDTO findProductById(int proId)
         {
@@ -74,6 +82,7 @@ namespace FoodStoreAPI.DAO
                         Quantity = x.Quantity,
                         ProductStatus = x.ProductStatus,
                         CreateAt = x.CreateAt,
+                        CateId = x.CateId,
                         CateName = x.Cate.CateName,
                         NameAccount = x.Acc.Name
                     })
@@ -133,6 +142,38 @@ namespace FoodStoreAPI.DAO
             }
         }
 
+        public static List<ProductDTO> getProductByCate(int categoryId)
+        {
+            var listProduct = new List<ProductDTO>();
+            try
+            {
+                FoodStoreContext context = new FoodStoreContext();
+                listProduct = context.Products
+                    .Include(x => x.Cate)
+                    .Include(x => x.Acc)
+                    .Where(x => x.CateId == categoryId)
+                    .Select(x => new ProductDTO
+                    {
+                        ProId = x.ProId,
+                        Images = x.Images,
+                        Name = x.Name,
+                        Price = x.Price,
+                        Unit = x.Unit,
+                        Quantity = x.Quantity,
+                        ProductStatus = x.ProductStatus,
+                        CateName = x.Cate.CateName,
+                        CreateAt = x.CreateAt,
+                        NameAccount = x.Acc.Name
+
+                    }).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return listProduct;
+        }
+
         public static List<ProductDTO> getProductOrder(int id)
         {
             var listProduct = new List<ProductDTO>();
@@ -172,7 +213,7 @@ namespace FoodStoreAPI.DAO
                 listProduct = context.Products
                     .Include(x => x.Cate)
                     .Include(x => x.Acc)
-                    .Where(x => x.ProductStatus == "On")
+                    .Where(x=> x.ProductStatus == "On")
                     .Select(x => new ProductDTO
                     {
                         ProId = x.ProId,
@@ -184,9 +225,10 @@ namespace FoodStoreAPI.DAO
                         Quantity = x.Quantity,
                         ProductStatus = x.ProductStatus,
                         AccId = x.AccId,
-                        CateId = x.CateId
-                    })
-                    .ToList();
+                        CateId = x.CateId,
+                        CateName = x.Cate != null ? x.Cate.CateName : null,
+                        NameAccount = x.Acc != null ? x.Acc.Name : null
+                    }).ToList();
             }
             catch (Exception ex)
             {
@@ -194,5 +236,114 @@ namespace FoodStoreAPI.DAO
             }
             return listProduct;
         }
+
+
+        public static List<ProductDTO> getAllProduct()
+        {
+            var listProduct = new List<ProductDTO>();
+            try
+            {
+                FoodStoreContext context = new FoodStoreContext();
+                listProduct = context.Products
+                    .Include(x => x.Cate)
+                    .Include(x => x.Acc)
+                    .Select(x => new ProductDTO
+                    {
+                        ProId = x.ProId,
+                        Name = x.Name,
+                        Price = x.Price,
+                        Unit = x.Unit,
+                        Images = x.Images,
+                        CreateAt = x.CreateAt,
+                        Quantity = x.Quantity,
+                        ProductStatus = x.ProductStatus,
+                        AccId = x.AccId,
+                        CateId = x.CateId,
+                        CateName = x.Cate != null ? x.Cate.CateName : null,
+                        NameAccount = x.Acc != null ? x.Acc.Name : null
+                    }).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return listProduct;
+        }
+
+        // Tìm kiếm sản phẩm theo tên
+        public static List<ProductDTO> SearchProducts(string keyword)
+        {
+            try
+            {
+                FoodStoreContext context = new FoodStoreContext();
+                var products = context.Products
+                    .Include(x => x.Cate)
+                    .Include(x => x.Acc)
+                    .Where(x => x.Name.Contains(keyword))
+                    .Select(x => new ProductDTO
+                    {
+                        ProId = x.ProId,
+                        Images = x.Images,
+                        Name = x.Name,
+                        Price = x.Price,
+                        Unit = x.Unit,
+                        Quantity = x.Quantity,
+                        ProductStatus = x.ProductStatus,
+                        CreateAt = x.CreateAt,
+                        CateName = x.Cate.CateName,
+                        NameAccount = x.Acc.Name
+                    }).ToList();
+                return products;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        // Sắp xếp sản phẩm theo ProductName hoặc ProductStatus
+        public static List<ProductDTO> OrderProducts(string orderByField, bool asc = true)
+        {
+            try
+            {
+                FoodStoreContext context = new FoodStoreContext();
+                IQueryable<Product> query = context.Products.Include(x => x.Cate).Include(x => x.Acc);
+
+                switch (orderByField)
+                {
+                    case "ProductName":
+                        query = asc ? query.OrderBy(x => x.Name) : query.OrderByDescending(x => x.Name);
+                        break;
+                    case "Status":
+                        query = asc ? query.OrderBy(x => x.ProductStatus) : query.OrderByDescending(x => x.ProductStatus);
+                        break;
+                    default:
+                        query = asc ? query.OrderBy(x => x.ProId) : query.OrderByDescending(x => x.ProId);
+                        break;
+                }
+
+                var products = query
+                    .Select(x => new ProductDTO
+                    {
+                        ProId = x.ProId,
+                        Images = x.Images,
+                        Name = x.Name,
+                        Price = x.Price,
+                        Unit = x.Unit,
+                        Quantity = x.Quantity,
+                        ProductStatus = x.ProductStatus,
+                        CreateAt = x.CreateAt,
+                        CateName = x.Cate.CateName,
+                        NameAccount = x.Acc.Name
+                    }).ToList();
+
+                return products;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
     }
 }

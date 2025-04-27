@@ -19,11 +19,13 @@ namespace FoodStoreAPI.DAO
             var config = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<Account, AccountDTO>();
+                cfg.CreateMap<Account, AccountLDTO>();
+                cfg.CreateMap<Role, RoleDTO>();
             });
             _mapper = config.CreateMapper();
         }
 
-        public static AccountDTO Login(string email, string password)
+        public static AccountLDTO Login(string email, string password)
         {
             
             string passHash = HashPassword(password);
@@ -31,7 +33,7 @@ namespace FoodStoreAPI.DAO
                 FirstOrDefault(x => x.Email == email && x.Password == passHash);
             if (account != null)
             {
-                return _mapper.Map<AccountDTO>(account);
+                return _mapper.Map<AccountLDTO>(account);
             }
             return null;
         }
