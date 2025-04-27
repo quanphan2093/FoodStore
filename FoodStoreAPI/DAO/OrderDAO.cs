@@ -140,12 +140,6 @@ namespace FoodStoreAPI.DAO
             try
             {
                 listOrder = context.Orders.Include(x => x.Customer)
-                            .Where(x => x.Status.Equals("Pending")
-                                      || x.Status.Equals("Accept Order")
-                                      || x.Status.Equals("Delivering")
-                                      || x.Status.Equals("Successful Delivery")
-                                      || x.Status.Equals("Delivery Failed")
-                                      || x.Status.Equals("Received"))
                             .Select(x => new OrderLDTO
                             {
                                 OrderId = x.OrderId,

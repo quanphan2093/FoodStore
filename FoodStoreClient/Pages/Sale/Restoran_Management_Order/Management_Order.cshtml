@@ -56,23 +56,19 @@
                                     {
                                     <option value="-1" selected>All</option>
                                     <option value="Pending">Pending</option>
-                                    <option value="Waiting Payment">Waiting Payment</option>
-                                    <option value="Accept Order">Accept Order</option>
                                     <option value="Delivering">Delivering</option>
                                     <option value="Successful Delivery">Successful Delivery</option>
                                     <option value="Delivery Failed">Delivery Failed</option>
-                                    <option value="Received">Received</option>
+                                    <option value="Close Order">Close Order</option>
                                     }
                                     else
                                     {
                                     <option value="-1" selected="@(Model.statusOrder == "-1")">All</option>
-                                    <option value="Pending" selected="@(Model.statusOrder == "Pending")">Pending</option>
-                                    <option value="Waiting Payment" selected="@(Model.statusOrder == "Waiting Payment")">Waiting Payment</option>
-                                    <option value="Accept Order" selected="@(Model.statusOrder == "Accept Order")">Accept Order</option>
+                                    <option value="Pending" selected="@(Model.statusOrder == "Pending")">Pending</option>    
                                     <option value="Delivering" selected="@(Model.statusOrder == "Delivering")">Delivering</option>
                                     <option value="Successful Delivery" selected="@(Model.statusOrder == "Successful Delivery")">Successful Delivery</option>
                                     <option value="Delivery Failed" selected="@(Model.statusOrder == "Delivery Failed")">Delivery Failed</option>
-                                    <option value="Received" selected="@(Model.statusOrder == "Received")">Received</option>
+                                    <option value="Delivery Failed" selected="@(Model.statusOrder == "Close Order")">Close Order</option>
                                     }
                             </select>
                         </td>
