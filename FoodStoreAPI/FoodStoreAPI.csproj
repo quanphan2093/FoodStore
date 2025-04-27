@@ -22,7 +22,11 @@
 
 	<ItemGroup>
 	  <Folder Include="Controllers\Authen\" />
+
+	  <Folder Include="Controllers\Ship\" />
+
 	  <Folder Include="Controllers\Sale\" />
+
 	</ItemGroup>
 
 </Project>
