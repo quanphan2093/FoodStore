@@ -3,6 +3,7 @@ using FoodStoreAPI.DTOs;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Net.Http.Headers;
+using System.Text;
 using System.Text.Json;
 
 namespace FoodStoreClient.Pages.Admin.Restoran_Management_Category
@@ -87,37 +88,37 @@ namespace FoodStoreClient.Pages.Admin.Restoran_Management_Category
             // Ensure all code paths return a value
             return Page();
         }
-        public async Task<IActionResult> OnPost()
+        public async Task<IActionResult> OnPost(IFormCollection form)
         {
-            var cateId = Request.Form["cateId"];
-            var cateName = Request.Form["name"];
-
-            if (string.IsNullOrEmpty(cateId) || string.IsNullOrEmpty(cateName))
+            var cateId = form["cateId"];
+            var cateName = form["name"];
+            int cateIdValue = int.Parse(cateId);
+            if (string.IsNullOrEmpty(cateName))
             {
                 TempData["ErrorMessage"] = "Category ID and Name are required.";
                 return Page();
             }
-            var categoryDTO = new
+            var categoryDTO = new CategoryDTO
             {
                 CateName = cateName
             };
 
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://localhost:7031/api/Categorys/Admin/UpdateCategory");
-                var response = await client.PutAsJsonAsync($"/{cateId}", categoryDTO);
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                string urlUpdate = "http://localhost:7031/api/Categorys/Admin/UpdateCategory";
+                var requestUrl = $"{urlUpdate}/{cateIdValue}";
+                string jsonData = JsonSerializer.Serialize(categoryDTO);
+                var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
 
-                if (response.IsSuccessStatusCode)
+                HttpResponseMessage response = await client.PutAsync(requestUrl, content);
+                if (!response.IsSuccessStatusCode)
                 {
-                    TempData["ErrorMessage"] = "Update successfully!";
-                    return Page();
+                    TempData["ErrorMessage"] = "Update failed!";
+                    return RedirectToPage("/Admin/Restoran_Management_Category/Management_Category_Update?cateId=" + cateId);
                 }
-                else
-                {
-                    var errorMsg = await response.Content.ReadAsStringAsync();
-                    TempData["ErrorMessage"] = "Error updating category: " + errorMsg;
-                    return Page();
-                }
+                TempData["ErrorMessage"] = "Update successfully!";
+                return RedirectToPage("/Admin/Restoran_Management_Category/Management_Category_Update?cateId=" + cateId);
             }
         }
     }

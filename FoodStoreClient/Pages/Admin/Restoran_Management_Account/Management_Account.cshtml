@@ -41,7 +41,10 @@
         <!-- Menu Start -->
         <div class="container-xxl py-5">
             <div class="container">
-                <h1>Welcome to view page</h1>
+                <div style="padding-bottom: 5px;">
+                    <h2>User Management</h2>
+                    <a asp-page="/Admin/Restoran_Management_Account/Management_Account_Create" class="btn btn-primary">Add New User</a>
+                </div>
                 <table>
                     <tr>
                         <th style="padding-right: 2px; text-align: left;"></th>
@@ -85,24 +88,11 @@
                             <td>@(pro.CreateAt.HasValue ? pro.CreateAt.Value.ToString("dd/MM/yyyy") : "")</td>
                             <td>@pro.RoleName</td>
                             <td>
-                                @if (pro.RoleId == 2)
-                                {
-                                    <a asp-page="/Admin/Restoran_Management_Account/Management_Account_Update" asp-route-customValue="3" asp-route-id="@pro.AccId">Cust</a>
+                                <a asp-page="/Admin/Restoran_Management_Account/Management_Account_Update" asp-route-accountId="@pro.AccId">View</a>
                                     <span>|</span>
-                                    <a asp-page="/Admin/Restoran_Management_Account/Management_Account_Update" asp-route-customValue="4" asp-route-id="@pro.AccId">Sale</a>
-                                }
-                                @if (pro.RoleId == 3)
-                                {
-                                    <a asp-page="/Admin/Restoran_Management_Account/Management_Account_Update" asp-route-customValue="2" asp-route-id="@pro.AccId">Ship</a>
-                                    <span>|</span>
-                                    <a asp-page="/Admin/Restoran_Management_Account/Management_Account_Update" asp-route-customValue="4" asp-route-id="@pro.AccId">Sale</a>
-                                }
-                                @if (pro.RoleId == 4)
-                                {
-                                    <a asp-page="/Admin/Restoran_Management_Account/Management_Account_Update" asp-route-customValue="3" asp-route-id="@pro.AccId">Cust</a>
-                                    <span>|</span>
-                                    <a asp-page="/Admin/Restoran_Management_Account/Management_Account_Update" asp-route-customValue="2" asp-route-id="@pro.AccId">Ship</a>
-                                }
+                                
+                                <a style="color:red" asp-page="/Admin/Restoran_Management_Account/Management_Account" asp-route-accountId="@pro.AccId" asp-page-handler="Post">Banned</a>
+                               
                             </td>
                         </tr>
                     }
