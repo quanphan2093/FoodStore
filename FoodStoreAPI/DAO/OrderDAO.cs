@@ -674,5 +674,25 @@ namespace FoodStoreAPI.DAO
                 }).ToList();
         }
 
+        public static List<OrderLDTO> GetOrdersByStatus(string status)
+        {
+            using var context = new FoodStoreContext();
+            return context.Orders
+                .Include(x => x.Customer)
+                .Where(x => x.Status != null && x.Status.Trim().ToLower() == status.Trim().ToLower())
+                .Select(x => new OrderLDTO
+                {
+                    OrderId = x.OrderId,
+                    CustomerId = x.CustomerId,
+                    CustomerName = x.Customer != null ? x.Customer.Name : "-",
+                    Gtotal = x.Gtotal,
+                    Status = x.Status,
+                    OrderDate = x.OrderDate,
+                    CreateAt = x.CreateAt
+                })
+                .ToList();
+        }
+
+
     }
 }

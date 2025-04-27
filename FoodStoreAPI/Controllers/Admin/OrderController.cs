@@ -67,5 +67,22 @@ namespace FoodStoreAPI.Controllers.Admin
             return Ok(orders);
         }
 
+
+        [HttpGet("Admin/GetOrderDetails/{orderId}")]
+        public IActionResult GetOrderDetails(int orderId)
+        {
+            var details = OrderDAO.getListOrderItem(orderId);
+            return Ok(details);
+        }
+
+        [HttpGet("Admin/FilterByStatus")]
+        public IActionResult FilterByStatus(string status)
+        {
+            var result = OrderDAO.GetOrdersByStatus(status);
+            return Ok(result);
+        }
+
+
+
     }
 }

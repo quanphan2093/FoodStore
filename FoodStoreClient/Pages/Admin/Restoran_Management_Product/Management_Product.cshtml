@@ -28,7 +28,7 @@
                         <option value="Off">Off</option>
                     </select>
                     <select class="form-select me-2" id="filterCategorySelect" onchange="filterProductsByCategory()" style="width: 170px;">
-                        <option value="">All Categories</option>
+                        <option value="">Filter By Categories</option>
                     </select>
                     <form class="d-flex" onsubmit="event.preventDefault(); searchProducts();" >
                         <input class="form-control me-2" id="searchInput" type="search" placeholder="Search product name" aria-label="Search" style="width: 150px;">
@@ -85,7 +85,10 @@
                     </div>
                     <div class="mb-2">
                         <label>Status</label>
-                        <input type="text" class="form-control" id="productStatus" />
+                        <select class="form-select" id="productStatus">
+                            <option value="On">On</option>
+                            <option value="Off">Off</option>
+                        </select>
                     </div>
                     <div class="mb-2">
                         <label>Unit</label>
@@ -178,7 +181,7 @@
 
             addEditSelect.innerHTML = categories.map(c => `<option value="${c.cateId}">${c.cateName}</option>`).join('');
 
-            filterSelect.innerHTML = '<option value="">-- All Categories --</option>' +
+            filterSelect.innerHTML = '<option value="">Filter by Categories</option>' +
                 categories.map(c => `<option value="${c.cateId}">${c.cateName}</option>`).join('');
         }
 
@@ -255,14 +258,38 @@
         }
 
         async function saveProduct() {
+            const name = document.getElementById("productName").value.trim();
+            const price = document.getElementById("productPrice").value;
+            const quantity = document.getElementById("productQuantity").value;
+            const status = document.getElementById("productStatus").value;
+            const unit = document.getElementById("productUnit").value.trim();
+            const category = document.getElementById("categorySelect").value;
+            const image = document.getElementById("productImage").value.trim();
+
+            // Validate - kiểm tra các trường không được để trống
+            if (!name || !price || !quantity || !status || !unit || !category || !image) {
+                alert("Please fill out all fields before saving!");
+                return;
+            }
+
+            // Validate - kiểm tra Price và Quantity không âm
+            if (parseFloat(price) < 0) {
+                alert("Price cannot be negative!");
+                return;
+            }
+            if (parseInt(quantity) < 0) {
+                alert("Quantity cannot be negative!");
+                return;
+            }
+
             const payload = {
-                name: document.getElementById("productName").value.trim(),
-                price: parseFloat(document.getElementById("productPrice").value),
-                quantity: parseInt(document.getElementById("productQuantity").value),
-                productStatus: document.getElementById("productStatus").value.trim(),
-                unit: document.getElementById("productUnit").value.trim(),
-                cateId: parseInt(document.getElementById("categorySelect").value),
-                images: document.getElementById("productImage").value.trim(),
+                name: name,
+                price: parseFloat(price),
+                quantity: parseInt(quantity),
+                productStatus: status,
+                unit: unit,
+                cateId: parseInt(category),
+                images: image,
                 accId: 1,
                 discountStartTime: null,
                 discountEndTime: null,
@@ -288,6 +315,8 @@
                 alert("Save failed: " + error);
             }
         }
+
+
 
 
         async function deleteProduct(id) {
