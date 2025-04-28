@@ -88,8 +88,9 @@ namespace FoodStoreClient.Pages.Admin.Restoran_Management_Account
             try
             {
                 int accId = int.Parse(accountId);
+                Console.Write(accId);
                 //using var httpClient = new HttpClient();
-                var UpdateApiUrl = "http://localhost:7031/Account/api/Admin/Update/Account";
+                var UpdateApiUrl = "http://localhost:7031/api/Account/Admin/Update/Account";
 
                 var requestCheckUrl = $"{UpdateApiUrl}?accId={accId}&roleId=5";
                 var responseCheck = await client.PutAsync(requestCheckUrl, null);
@@ -118,9 +119,9 @@ namespace FoodStoreClient.Pages.Admin.Restoran_Management_Account
             {
                 int accId = int.Parse(accountId);
                 //using var httpClient = new HttpClient();
-                var UpdateApiUrl = "http://localhost:7031/Account/api/Admin/Update/Account";
+                var UpdateApiUrl = "http://localhost:7031/api/Account/Admin/Update/Account";
 
-                var requestCheckUrl = $"{UpdateApiUrl}?accId={accId}&roleId=";
+                var requestCheckUrl = $"{UpdateApiUrl}?accId={accId}&roleId=3";
                 var responseCheck = await client.PutAsync(requestCheckUrl, null);
 
                 if (responseCheck.IsSuccessStatusCode)
