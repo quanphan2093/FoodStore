@@ -24,7 +24,7 @@ namespace FoodStoreAPI.Controllers.Guest
         public IActionResult Login(string username, string pass)
         {
             var user = AccountDAO.Login(username, pass);
-            if (user != null)
+            if (user != null && user.RoleId != 5)
             {
                 var issuer = _configuration["jwt:issuer"];
                 var audience = _configuration["jwt:audience"];

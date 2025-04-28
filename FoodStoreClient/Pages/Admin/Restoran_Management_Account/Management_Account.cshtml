@@ -1,8 +1,14 @@
 ﻿@page
 @model FoodStoreClient.Pages.Admin.Restoran_Management_Account.Management_AccountModel
 @{
-
+    ViewBag.PageTitle = "Admin";
+    ViewBag.Breadcrumbs = new List<Tuple<string, string>>
+    {
+        Tuple.Create("/Admin/Restoran_Management_Account/Management_Account", "Admin"),
+        Tuple.Create("Management_Account_Update", "Update Account")
+    };
 }
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,10 +60,19 @@
                     <tr>
                         <td></td>
                         <form method="get">
-                        <td style="padding-right: 5px; text-align: left;">
-                            <input type="text" value="@Model.searchAccount" name="search" />
-                        </td>
-                        <td style="padding-right: 10px; text-align: left;"><input class="btn btn-primary" type="submit" value="Submit" /></td>
+                            <td style="padding-right: 5px; text-align: left;">
+                                <input type="text" value="@Model.searchAccount" name="search" />
+                            </td>
+                            <td>
+                                <select name="sortBy" style="padding-left: 5px;height:29px">
+                                    <option name="sortBy"  value="All">All</option>
+                                    <option name="sortBy"  value="fullnameAsc"> Username ASC</option>
+                                    <option name="sortBy" value="fullnameDesc">Username DESC</option>
+                                    <option name="sortBy" value="emailAsc"> Email ASC</option>
+                                    <option name="sortBy"  value="emailDESC">Email DESC</option>
+                                </select>
+                            </td>
+                            <td style="padding-right: 10px; text-align: left;"><input class="btn btn-primary" type="submit" value="Search" /></td>
                         </form>
                     </tr>
                     <tr>
@@ -89,10 +104,21 @@
                             <td>@pro.RoleName</td>
                             <td>
                                 <a asp-page="/Admin/Restoran_Management_Account/Management_Account_Update" asp-route-accountId="@pro.AccId">View</a>
-                                    <span>|</span>
+                                <span>|</span>
+
+                                @{
+                                    if (pro.RoleId != 5)
+                                    {
+                                        <a style="color:red" asp-page="/Admin/Restoran_Management_Account/Management_Account" asp-route-accountId="@pro.AccId" asp-page-handler="Ban">Banned</a>
+                                    }
+                                }
                                 
-                                <a style="color:red" asp-page="/Admin/Restoran_Management_Account/Management_Account" asp-route-accountId="@pro.AccId" asp-page-handler="Post">Banned</a>
-                               
+                                @{
+                                    if(pro.RoleId == 5)
+                                    {
+                                        <a style="color:green" asp-page="/Admin/Restoran_Management_Account/Management_Account" asp-route-accountId="@pro.AccId" asp-page-handler="Unban">Unban</a>
+                                    }
+                                }
                             </td>
                         </tr>
                     }

@@ -24,6 +24,7 @@
             <!-- Spinner Start -->
             <!-- Spinner End -->
             <!-- Navbar & Hero Start -->
+
             @if (roleId == "3")
             {
                 <div class="container-xxl position-relative p-0">
@@ -35,36 +36,43 @@
                             <span class="fa fa-bars"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarCollapse">
+                            @{
+                                var currentPath = ViewContext.HttpContext.Request.Path.ToString().ToLower();
+                            }
+
                             <div class="navbar-nav ms-auto py-0 pe-4">
-                                <a href="~/Customer/Restoran_Home/Home" class="nav-item nav-link">Home</a>
-                                <a href="~/Customer/Restoran_About/About" class="nav-item nav-link active">About</a>
-                                <a href="~/Customer/Restoran_Service/Service" class="nav-item nav-link">Service</a>
-                                <a href="~/Customer/Restoran_Menu/Menu" class="nav-item nav-link">Menu</a>
+                                <a href="/Customer/Restoran_Home/Home" class="nav-item nav-link @(currentPath == "/customer/restoran_home/home" ? "active" : "")">Home</a>
+                                <a href="/Customer/Restoran_About/About" class="nav-item nav-link @(currentPath == "/customer/restoran_about/about" ? "active" : "")">About</a>
+                                <a href="/Customer/Restoran_Service/Service" class="nav-item nav-link @(currentPath == "/customer/restoran_service/service" ? "active" : "")">Service</a>
+                                <a href="/Customer/Restoran_Menu/Menu" class="nav-item nav-link @(currentPath == "/customer/restoran_menu/menu" ? "active" : "")">Menu</a>
+
                                 <div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                                    <a href="#" class="nav-link dropdown-toggle @(currentPath.StartsWith("/customer/restoran_booking/booking") || currentPath.StartsWith("/customer/restoran_team/team") || currentPath.StartsWith("/customer/restoran_testimonial/testimonial") ? "active" : "")" data-bs-toggle="dropdown">Pages</a>
                                     <div class="dropdown-menu m-0">
-                                        <a href="~/Customer/Restoran_Booking/Booking" class="dropdown-item">Booking</a>
-                                        <a href="~/Customer/Restoran_Team/Team" class="dropdown-item">Our Team</a>
-                                        <a href="~/Customer/Restoran_Testimonial/Testimonial" class="dropdown-item">Testimonial</a>
+                                        <a href="/Customer/Restoran_Booking/Booking" class="dropdown-item @(currentPath == "/customer/restoran_booking/booking" ? "active" : "")">Booking</a>
+                                        <a href="/Customer/Restoran_Team/Team" class="dropdown-item @(currentPath == "/customer/restoran_team/team" ? "active" : "")">Our Team</a>
+                                        <a href="/Customer/Restoran_Testimonial/Testimonial" class="dropdown-item @(currentPath == "/customer/restoran_testimonial/testimonial" ? "active" : "")">Testimonial</a>
                                     </div>
                                 </div>
-                                <a href="~/Customer/Restoran_Contact/Contact" class="nav-item nav-link">Contact</a>
+
+                                <a href="/Customer/Restoran_Contact/Contact" class="nav-item nav-link @(currentPath == "/customer/restoran_contact/contact" ? "active" : "")">Contact</a>
+
                                 @if (!string.IsNullOrEmpty(userName))
                                 {
                                     <div class="nav-item dropdown">
                                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">@userName</a>
                                         <div class="dropdown-menu m-0">
-                                            <a href="~/Customer/Resstoran_UserProfile/Profile" class="dropdown-item">Detail Account</a>
-                                            <a href="~/Customer/Restoran_Order_FandB/Cart" class="dropdown-item">Your Cart</a>
-                                            <a href="~/Customer/Restoran_Order_FandB/Order" class="dropdown-item">Your Order</a>
-                                            <a href="~/Customer/Restoran_Change_Password/Change_Passwords" class="dropdown-item">Change Password</a>
-                                            <a href="~/Customer/Restoran_Logout/Logout" class="dropdown-item">Logout</a>
+                                            <a href="/Customer/Resstoran_UserProfile/Profile" class="dropdown-item @(currentPath == "/customer/resstoran_userprofile/profile" ? "active" : "")">Detail Account</a>
+                                            <a href="/Customer/Restoran_Order_FandB/Cart" class="dropdown-item @(currentPath == "/customer/restoran_order_fandb/cart" ? "active" : "")">Your Cart</a>
+                                            <a href="/Customer/Restoran_Order_FandB/Order" class="dropdown-item @(currentPath == "/customer/restoran_order_fandb/order" ? "active" : "")">Your Order</a>
+                                            <a href="/Customer/Restoran_Change_Password/Change_Passwords" class="dropdown-item @(currentPath == "/customer/restoran_change_password/change_passwords" ? "active" : "")">Change Password</a>
+                                            <a href="/Customer/Restoran_Logout/Logout" class="dropdown-item">Logout</a>
                                         </div>
                                     </div>
                                 }
                                 else
                                 {
-                                    <a href="~/Guest/Restoran_Login/Login" class="nav-item nav-link">Login</a>
+                                    <a href="/Guest/Restoran_Login/Login" class="nav-item nav-link @(currentPath == "/guest/restoran_login/login" ? "active" : "")">Login</a>
                                 }
                             </div>
                             <a href="~/Customer/Restoran_Booking/Booking" class="btn btn-primary py-2 px-4">Book A Table</a>
@@ -73,14 +81,19 @@
 
                     <div class="container-xxl py-5 bg-dark hero-header mb-5">
                         <div class="container text-center my-5 pt-5 pb-4">
-                            <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb justify-content-center text-uppercase">
-                                    <li class="breadcrumb-item"><a href="~/Customer/Restoran_Home/Home">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="~/Customer/Pages">Pages</a></li>
-                                    <li class="breadcrumb-item"><a href="~/Customer/Restoran_About/About">About</a></li>
-                                </ol>
-                            </nav>
+                            <h1 class="display-3 text-white mb-3 animated slideInDown">@ViewBag.PageTitle</h1>
+                            <ol class="breadcrumb justify-content-center text-uppercase">
+                                @if (ViewBag.Breadcrumbs != null)
+                                {
+                                    foreach (var breadcrumb in ViewBag.Breadcrumbs as List<Tuple<string, string>>)
+                                    {
+                                        <li class="breadcrumb-item">
+                                            <a href="@breadcrumb.Item1">@breadcrumb.Item2</a>
+                                        </li>
+                                    }
+                                }
+                            </ol>
+
                         </div>
                     </div>
                 </div>
@@ -96,33 +109,47 @@
                             <span class="fa fa-bars"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarCollapse">
+                            @{
+                                var currentPath = ViewContext.HttpContext.Request.Path.ToString().ToLower();
+                            }
+
                             <div class="navbar-nav ms-auto py-0 pe-4">
-                                <a href="~/Ship/Restoran_Management_Order/Management_Order" class="nav-item nav-link">Order</a>
+                                <a href="/Ship/Restoran_Management_Order/Management_Order" class="nav-item nav-link @(currentPath == "/ship/restoran_management_order/management_order" ? "active" : "")">Order</a>
+
                                 @if (!string.IsNullOrEmpty(userName))
                                 {
                                     <div class="nav-item dropdown">
                                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Shiper: @userName</a>
                                         <div class="dropdown-menu m-0">
-                                            <a href="~/Ship/Resstoran_UserProfile/Profile" class="dropdown-item">Detail Account</a>
-                                            <a href="~/Ship/Resstoran_Change_Password/Change_Passwords" class="dropdown-item">Change Password</a>
-                                            <a href="~/Ship/Restoran_Logout/Logout" class="dropdown-item">Logout</a>
+                                            <a href="/Ship/Resstoran_UserProfile/Profile" class="dropdown-item @(currentPath == "/ship/resstoran_userprofile/profile" ? "active" : "")">Detail Account</a>
+                                            <a href="/Ship/Resstoran_Change_Password/Change_Passwords" class="dropdown-item @(currentPath == "/ship/resstoran_change_password/change_passwords" ? "active" : "")">Change Password</a>
+                                            <a href="/Ship/Restoran_Logout/Logout" class="dropdown-item">Logout</a>
                                         </div>
                                     </div>
                                 }
                                 else
                                 {
-                                    <a href="~/Guest/Restoran_Login/Login" class="nav-item nav-link">Login</a>
+                                    <a href="/Guest/Restoran_Login/Login" class="nav-item nav-link @(currentPath == "/guest/restoran_login/login" ? "active" : "")">Login</a>
                                 }
                             </div>
+
                         </div>
                     </nav>
 
                     <div class="container-xxl py-5 bg-dark hero-header mb-5">
                         <div class="container text-center my-5 pt-5 pb-4">
-                            <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
+                            <h1 class="display-3 text-white mb-3 animated slideInDown">@ViewBag.PageTitle</h1>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb justify-content-center text-uppercase">
-                                    <li class="breadcrumb-item"><a href="~/Ship/Restoran_Management_Order/Management_Order">Order</a></li>
+                                    @if (ViewBag.Breadcrumbs != null)
+                                    {
+                                        foreach (var breadcrumb in ViewBag.Breadcrumbs as List<Tuple<string, string>>)
+                                        {
+                                            <li class="breadcrumb-item">
+                                                <a href="@breadcrumb.Item1">@breadcrumb.Item2</a>
+                                            </li>
+                                        }
+                                    }
                                 </ol>
                             </nav>
                         </div>
@@ -140,40 +167,50 @@
                             <span class="fa fa-bars"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarCollapse">
+                            @{
+                                var currentPath = ViewContext.HttpContext.Request.Path.ToString().ToLower();
+                            }
+
                             <div class="navbar-nav ms-auto py-0 pe-4">
-                                <a href="~/Admin/Restoran_Management_Category/Management_Category" class="nav-item nav-link">Category</a>
-                                <a href="~/Admin/Restoran_Management_Product/Management_Product" class="nav-item nav-link">Product</a>
-                                <a href="~/Admin/Restoran_Management_Order/Management_Order" class="nav-item nav-link">Order</a>
-                                <a href="~/Admin/Restoran_Management_Account/Management_Account" class="nav-item nav-link">Account</a>
-                                <a href="~/Admin/Restoran_Management_Revenue/Management_Revenue" class="nav-item nav-link">Revenue</a>
+                                <a href="/Admin/Restoran_Management_Category/Management_Category" class="nav-item nav-link @(currentPath == "/admin/restoran_management_category/management_category" ? "active" : "")">Category</a>
+                                <a href="/Admin/Restoran_Management_Product/Management_Product" class="nav-item nav-link @(currentPath == "/admin/restoran_management_product/management_product" ? "active" : "")">Product</a>
+                                <a href="/Admin/Restoran_Management_Order/Management_Order" class="nav-item nav-link @(currentPath == "/admin/restoran_management_order/management_order" ? "active" : "")">Order</a>
+                                <a href="/Admin/Restoran_Management_Account/Management_Account" class="nav-item nav-link @(currentPath == "/admin/restoran_management_account/management_account" ? "active" : "")">Account</a>
+                                <a href="/Admin/Restoran_Management_Revenue/Management_Revenue" class="nav-item nav-link @(currentPath == "/admin/restoran_management_revenue/management_revenue" ? "active" : "")">Revenue</a>
+
                                 @if (!string.IsNullOrEmpty(userName))
                                 {
                                     <div class="nav-item dropdown">
                                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admin: @userName</a>
                                         <div class="dropdown-menu m-0">
-                                            <a href="~/Admin/Restoran_Logout/Logout" class="dropdown-item">Logout</a>
+                                            <a href="/Admin/Restoran_Logout/Logout" class="dropdown-item">Logout</a>
                                         </div>
                                     </div>
                                 }
                                 else
                                 {
-                                    <a href="~/Guest/Restoran_Login/Login" class="nav-item nav-link">Login</a>
+                                    <a href="/Guest/Restoran_Login/Login" class="nav-item nav-link @(currentPath == "/guest/restoran_login/login" ? "active" : "")">Login</a>
                                 }
                             </div>
+
                         </div>
                     </nav>
                     <div class="container-xxl py-5 bg-dark hero-header mb-5">
                         <div class="container text-center my-5 pt-5 pb-4">
-                            <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
+                            <h1 class="display-3 text-white mb-3 animated slideInDown">@ViewBag.PageTitle</h1>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb justify-content-center text-uppercase">
-                                    <li class="breadcrumb-item">
-                                        <a href="~/Admin/Restoran_Management_Account/Management_Account">Account</a>
-                                    </li>
-                                    <li class="breadcrumb-item">
-                                        <a href="~/Admin/Restoran_Management_Revenue/Management_Revenue">Revenue</a>
-                                    </li>
+                                    @if (ViewBag.Breadcrumbs != null)
+                                    {
+                                        foreach (var breadcrumb in ViewBag.Breadcrumbs as List<Tuple<string, string>>)
+                                        {
+                                            <li class="breadcrumb-item">
+                                                <a href="@breadcrumb.Item1">@breadcrumb.Item2</a>
+                                            </li>
+                                        }
+                                    }
                                 </ol>
+
                             </nav>
                         </div>
                     </div>
@@ -190,38 +227,50 @@
                             <span class="fa fa-bars"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarCollapse">
+                            @{
+                                var currentPath = ViewContext.HttpContext.Request.Path.ToString().ToLower();
+                            }
+
                             <div class="navbar-nav ms-auto py-0 pe-4">
-                                <a href="~/Sale/Restoran_Management_Menu/Menu" class="nav-item nav-link">Menu</a>
-                                <a href="~/Sale/Restoran_Management_Order/Management_Order" class="nav-item nav-link">Order</a>
-                                <a href="~/Sale/Restoran_Management_Product/Management_Product" class="nav-item nav-link">Product</a>
+                                <a href="/Sale/Restoran_Management_Menu/Menu" class="nav-item nav-link @(currentPath == "/sale/restoran_management_menu/menu" ? "active" : "")">Menu</a>
+                                <a href="/Sale/Restoran_Management_Order/Management_Order" class="nav-item nav-link @(currentPath == "/sale/restoran_management_order/management_order" ? "active" : "")">Order</a>
+                                <a href="/Sale/Restoran_Management_Product/Management_Product" class="nav-item nav-link @(currentPath == "/sale/restoran_management_product/management_product" ? "active" : "")">Product</a>
+
                                 @if (!string.IsNullOrEmpty(userName))
                                 {
                                     <div class="nav-item dropdown">
                                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Saler: @userName</a>
                                         <div class="dropdown-menu m-0">
-                                            <a href="~/Sale/Resstoran_UserProfile/Profile" class="dropdown-item">Detail Account</a>
-                                            <a href="~/Sale/Restoran_Revenue_Report/Report" class="dropdown-item">Revenue Report</a>
-                                            <a href="~/Sale/Restoran_Change_Password/Change_Passwords" class="dropdown-item">Change Password</a>
-                                            <a href="~/Sale/Restoran_Logout/Logout" class="dropdown-item">Logout</a>
+                                            <a href="/Sale/Resstoran_UserProfile/Profile" class="dropdown-item @(currentPath == "/sale/restoran_userprofile/profile" ? "active" : "")">Detail Account</a>
+                                            <a href="/Sale/Restoran_Revenue_Report/Report" class="dropdown-item @(currentPath == "/sale/restoran_revenue_report/report" ? "active" : "")">Revenue Report</a>
+                                            <a href="/Sale/Restoran_Change_Password/Change_Passwords" class="dropdown-item @(currentPath == "/sale/restoran_change_password/changepasswords" ? "active" : "")">Change Password</a>
+                                            <a href="/Sale/Restoran_Logout/Logout" class="dropdown-item @(currentPath == "/sale/restoran_logout/logout" ? "active" : "")">Logout</a>
                                         </div>
                                     </div>
                                 }
                                 else
                                 {
-                                    <a href="~/Guest/Restoran_Login/Login" class="nav-item nav-link">Login</a>
+                                    <a href="/Guest/Restoran_Login/Login" class="nav-item nav-link @(currentPath == "/guest/restoran_login/login" ? "active" : "")">Login</a>
                                 }
                             </div>
+
                         </div>
                     </nav>
 
                     <div class="container-xxl py-5 bg-dark hero-header mb-5">
                         <div class="container text-center my-5 pt-5 pb-4">
-                            <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
+                            <h1 class="display-3 text-white mb-3 animated slideInDown">@ViewBag.PageTitle</h1>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb justify-content-center text-uppercase">
-                                    <li class="breadcrumb-item"><a href="~/Sale/Restoran_Management_Menu/Menu">Menu</a></li>
-                                    <li class="breadcrumb-item"><a href="~/Sale/Restoran_Management_Order/Management_Order">Order</a></li>
-                                    <li class="breadcrumb-item"><a href="~/Sale/Restoran_Management_Product/Management_Product">Product</a></li>
+                                    @if (ViewBag.Breadcrumbs != null)
+                                    {
+                                        foreach (var breadcrumb in ViewBag.Breadcrumbs as List<Tuple<string, string>>)
+                                        {
+                                            <li class="breadcrumb-item">
+                                                <a href="@breadcrumb.Item1">@breadcrumb.Item2</a>
+                                            </li>
+                                        }
+                                    }
                                 </ol>
                             </nav>
                         </div>
@@ -239,33 +288,46 @@
                             <span class="fa fa-bars"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarCollapse">
+                            @{
+                                var currentPath = ViewContext.HttpContext.Request.Path.ToString().ToLower();
+                            }
+
                             <div class="navbar-nav ms-auto py-0 pe-4">
-                                <a href="~/Guest/Restoran_Home/Home" class="nav-item nav-link">Home</a>
-                                <a href="~/Guest/Restoran_About/About" class="nav-item nav-link active">About</a>
-                                <a href="~/Guest/Restoran_Service/Service" class="nav-item nav-link">Service</a>
+                                <a href="~/Guest/Restoran_Home/Home" class="nav-item nav-link @(currentPath.Contains("/guest/restoran_home/home") ? "active" : "")">Home</a>
+                                <a href="~/Guest/Restoran_About/About" class="nav-item nav-link @(currentPath.Contains("/guest/restoran_about/about") ? "active" : "")">About</a>
+                                <a href="~/Guest/Restoran_Service/Service" class="nav-item nav-link @(currentPath.Contains("/guest/restoran_service/service") ? "active" : "")">Service</a>
+
                                 <div class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                                     <div class="dropdown-menu m-0">
-                                        <a href="~/Guest/Restoran_Booking/Booking" class="dropdown-item">Booking</a>
-                                        <a href="~/Guest/Restoran_Team/Team" class="dropdown-item">Our Team</a>
-                                        <a href="~/Guest/Restoran_Testimonial/Testimonial" class="dropdown-item">Testimonial</a>
+                                        <a href="~/Guest/Restoran_Booking/Booking" class="dropdown-item @(currentPath.Contains("/guest/restoran_booking/booking") ? "active" : "")">Booking</a>
+                                        <a href="~/Guest/Restoran_Team/Team" class="dropdown-item @(currentPath.Contains("/guest/restoran_team/team") ? "active" : "")">Our Team</a>
+                                        <a href="~/Guest/Restoran_Testimonial/Testimonial" class="dropdown-item @(currentPath.Contains("/guest/restoran_testimonial/testimonial") ? "active" : "")">Testimonial</a>
                                     </div>
                                 </div>
-                                <a href="~/Guest/Restoran_Contact/Contact" class="nav-item nav-link">Contact</a>
-                                <a href="~/Guest/Restoran_Login/Login" class="nav-item nav-link">Login</a>
+
+                                <a href="~/Guest/Restoran_Contact/Contact" class="nav-item nav-link @(currentPath.Contains("/guest/restoran_contact/contact") ? "active" : "")">Contact</a>
+                                <a href="~/Guest/Restoran_Login/Login" class="nav-item nav-link @(currentPath.Contains("/guest/restoran_login/login") ? "active" : "")">Login</a>
                             </div>
+
                             <a href="~/Guest/Restoran_Booking/Booking" class="btn btn-primary py-2 px-4">Book A Table</a>
                         </div>
                     </nav>
 
                     <div class="container-xxl py-5 bg-dark hero-header mb-5">
                         <div class="container text-center my-5 pt-5 pb-4">
-                            <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
+                            <h1 class="display-3 text-white mb-3 animated slideInDown">@ViewBag.PageTitle</h1>
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb justify-content-center text-uppercase">
-                                    <li class="breadcrumb-item"><a href="~/Restoran_Home/Home">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="~/Pages">Pages</a></li>
-                                    <li class="breadcrumb-item"><a href="~/Restoran_About/About">About</a></li>
+                                    @if (ViewBag.Breadcrumbs != null)
+                                    {
+                                        foreach (var breadcrumb in ViewBag.Breadcrumbs as List<Tuple<string, string>>)
+                                        {
+                                            <li class="breadcrumb-item">
+                                                <a href="@breadcrumb.Item1">@breadcrumb.Item2</a>
+                                            </li>
+                                        }
+                                    }
                                 </ol>
                             </nav>
                         </div>

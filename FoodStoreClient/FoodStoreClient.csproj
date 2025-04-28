@@ -37,6 +37,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Pages\Admin\Restoran_Logout\Logout.cshtml" />
     <None Include="Pages\Sale\Resstoran_UserProfile\Profile.cshtml" />
     <None Include="Pages\Sale\Restoran_Change_Password\Change_Passwords.cshtml" />
     <None Include="wwwroot\js\site.js" />
@@ -82,17 +83,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Admin\Restoran_Logout\" />
     <Folder Include="Pages\Ship\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.104.2" />
     <PackageReference Include="EPPlus" Version="6.2.19" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Admin\" />
-    <Folder Include="Pages\Customer\" />
     <Folder Include="Pages\Guest\" />
     <ProjectReference Include="..\FoodStoreAPI\FoodStoreAPI.csproj" />
   </ItemGroup>

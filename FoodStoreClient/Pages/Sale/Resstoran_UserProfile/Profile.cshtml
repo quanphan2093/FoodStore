@@ -2,6 +2,12 @@
 @model FoodStoreClient.Pages.Sale.Resstoran_UserProfile.ProfileModel
 @{
     var errorMessage = TempData["ErrorMessage"] as string;
+    ViewBag.PageTitle = "Sale";
+    ViewBag.Breadcrumbs = new List<Tuple<string, string>>
+    {
+        Tuple.Create("/Sale/Restoran_Management_Menu/Menu", "Sale"),
+        Tuple.Create("Profile", "Profile")
+    };
 }
 <!DOCTYPE html>
 <html lang="en">

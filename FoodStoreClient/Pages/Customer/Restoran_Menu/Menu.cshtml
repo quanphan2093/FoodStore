@@ -1,6 +1,12 @@
 ﻿@page
 @model FoodStoreClient.Pages.Customer.Restoran_Menu.MenuModel
 @{
+    ViewBag.PageTitle = "Our Menu";
+    ViewBag.Breadcrumbs = new List<Tuple<string, string>>
+    {
+        Tuple.Create("/Customer/Restoran_Home/Home", "Home"),
+        Tuple.Create("Menu", "Menu")
+    };
 }
 <!DOCTYPE html>
 <html lang="en">

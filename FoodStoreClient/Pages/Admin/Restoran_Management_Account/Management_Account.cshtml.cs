@@ -18,12 +18,13 @@ namespace FoodStoreClient.Pages.Admin.Restoran_Management_Account
         public int PageSize { get; set; } = 5;
         public string status { get; set; } = "";
         public string searchAccount { get; set; } = "";
+        public string sort { get; set; } = "";
         public Management_AccountModel()
         {
             client = new HttpClient();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
-        public async Task<IActionResult> OnGet(int? pageNumber, string? search)
+        public async Task<IActionResult> OnGet(int? pageNumber, string? search, string? sortBy)
         {
             string accId = HttpContext.Session.GetString("accId");
             if (accId == null)
@@ -32,14 +33,15 @@ namespace FoodStoreClient.Pages.Admin.Restoran_Management_Account
             }
             int total = 0;
             searchAccount = search;
+            sort = sortBy;
             CurrentPage = pageNumber ?? 10;
             try
             {
                 string requestUrl;
 
-                if (!string.IsNullOrWhiteSpace(searchAccount))
+                if (!string.IsNullOrWhiteSpace(searchAccount) || !string.IsNullOrWhiteSpace(sort))
                 {
-                    requestUrl = $"{AccountSearchApiUrl}?searchAccount={searchAccount}";
+                    requestUrl = $"{AccountSearchApiUrl}?searchAccount={searchAccount}&sort={sort}";
                 }
                 else
                 {
@@ -81,15 +83,45 @@ namespace FoodStoreClient.Pages.Admin.Restoran_Management_Account
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync(string accountId)
+        public async Task<IActionResult> OnGetBanAsync(string accountId)
+        {
+            try
+            {
+                int accId = int.Parse(accountId);
+                Console.Write(accId);
+                //using var httpClient = new HttpClient();
+                var UpdateApiUrl = "http://localhost:7031/api/Account/Admin/Update/Account";
+
+                var requestCheckUrl = $"{UpdateApiUrl}?accId={accId}&roleId=5";
+                var responseCheck = await client.PutAsync(requestCheckUrl, null);
+
+                if (responseCheck.IsSuccessStatusCode)
+                {
+                    TempData["ErrorMessage"] = "Cập nhật tài khoản thành công!";
+                    return RedirectToPage("/Admin/Restoran_Management_Account/Management_Account"); // về lại trang danh sách
+                }
+                else
+                {
+                    var errorContent = await responseCheck.Content.ReadAsStringAsync();
+                    TempData["ErrorMessage"] = "Cập nhật thất bại: " + errorContent;
+                    return Page();
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = "Lỗi trong quá trình cập nhật!";
+                return Page();
+            }
+        }
+        public async Task<IActionResult> OnGetUnbanAsync(string accountId)
         {
             try
             {
                 int accId = int.Parse(accountId);
                 //using var httpClient = new HttpClient();
-                var UpdateApiUrl = "http://localhost:7031/Account/api/Admin/Update/Account";
+                var UpdateApiUrl = "http://localhost:7031/api/Account/Admin/Update/Account";
 
-                var requestCheckUrl = $"{UpdateApiUrl}?accId={accId}&roleId=5";
+                var requestCheckUrl = $"{UpdateApiUrl}?accId={accId}&roleId=3";
                 var responseCheck = await client.PutAsync(requestCheckUrl, null);
 
                 if (responseCheck.IsSuccessStatusCode)

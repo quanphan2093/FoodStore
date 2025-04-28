@@ -124,26 +124,55 @@ namespace FoodStoreAPI.DAO
             }
             return listAccount;
         }
-        public static List<AccountLDTO> getAccountSearch(string searchAccount)
+        public static List<AccountLDTO> getAccountSearch(string searchAccount, string sort)
         {
             FoodStoreContext context = new FoodStoreContext();
             var listAccount = new List<AccountLDTO>();
             try
             {
-                listAccount = context.Accounts.Include(x => x.Role)
-                    .Where(x => (x.Username.ToLower().Contains(searchAccount.ToLower())
-                    || x.AccId.ToString().Contains(searchAccount)
-                    || x.RoleId.ToString().Contains(searchAccount)))
-                    .Select(x => new AccountLDTO
-                    {
-                        AccId = x.AccId,
-                        Username = x.Username,
-                        CreateAt = x.CreateAt,
-                        RoleId = x.RoleId,
-                        Email = x.Email,
-                        Phone = x.Phone,
-                        RoleName = x.Role.RoleName
-                    }).ToList();
+                var query = context.Accounts.Include(x => x.Role).AsQueryable();
+
+                // Search
+                if (!string.IsNullOrWhiteSpace(searchAccount))
+                {
+                    searchAccount = searchAccount.ToLower();
+                    query = query.Where(x =>
+                        x.Username.ToLower().Contains(searchAccount.ToLower()) ||
+                        x.Email.ToLower().Contains(searchAccount) ||
+                        x.Phone.Contains(searchAccount)
+                    );
+                }
+
+                // Sort
+                switch (sort)
+                {
+                    case "fullnameAsc":
+                        query = query.OrderBy(x => x.Username);
+                        break;
+                    case "fullnameDesc":
+                        query = query.OrderByDescending(x => x.Username);
+                        break;
+                    case "emailAsc":
+                        query = query.OrderBy(x => x.Email);
+                        break;
+                    case "emailDesc":
+                        query = query.OrderByDescending(x => x.Email);
+                        break;
+                    default:
+                        query = query.OrderBy(x => x.AccId); // Default sort
+                        break;
+                }
+
+                listAccount = query.Select(x => new AccountLDTO
+                {
+                    AccId = x.AccId,
+                    Username = x.Username,
+                    CreateAt = x.CreateAt,
+                    RoleId = x.RoleId,
+                    Email = x.Email,
+                    Phone = x.Phone,
+                    RoleName = x.Role.RoleName
+                }).ToList();
             }
             catch (Exception ex)
             {

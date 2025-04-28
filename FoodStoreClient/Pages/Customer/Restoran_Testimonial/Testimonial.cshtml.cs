@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace FoodStoreClient.Pages.Guest.Restoran_About
+namespace FoodStoreClient.Pages.Customer.Restoran_Testimonial
 {
-    public class AboutModel : PageModel
+    public class TestimonialModel : PageModel
     {
         public void OnGet()
         {

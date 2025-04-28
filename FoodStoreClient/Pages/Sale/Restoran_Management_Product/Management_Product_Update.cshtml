@@ -3,6 +3,12 @@
 @{
     ViewData["Title"] = "Product Update";
     var errorMessage = TempData["ErrorMessage"] as string;
+    ViewBag.PageTitle = "Sale";
+    ViewBag.Breadcrumbs = new List<Tuple<string, string>>
+    {
+       Tuple.Create("/Sale/Restoran_Management_Menu/Menu", "Sale"),
+        Tuple.Create("Management_Product_Update", "Update Product")
+    };
 }
 <!DOCTYPE html>
 <html lang="en">

@@ -2,6 +2,12 @@
 @model FoodStoreClient.Pages.Sale.Restoran_Management_Order.Management_OrderModel
 @{
     var errorMessage = TempData["ErrorMessage"] as string;
+    ViewBag.PageTitle = "Sale";
+    ViewBag.Breadcrumbs = new List<Tuple<string, string>>
+    {
+        Tuple.Create("/Sale/Restoran_Management_Menu/Menu", "Sale"),
+        Tuple.Create("Management_Order", "Manage Order")
+    };
 }
 <!DOCTYPE html>
 <html lang="en">
