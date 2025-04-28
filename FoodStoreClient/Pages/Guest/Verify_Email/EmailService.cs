@@ -16,7 +16,7 @@ namespace FoodStoreClient.Pages.Guest.Verify_Email
         {
             var smtpSettings = _configuration.GetSection("SmtpSettings");
 
-            var smtpClient = new SmtpClient(smtpSettings["Server"])
+            var smtpClient = new SmtpClient(smtpSettings["SmtpServer"])
             {
                 Port = int.Parse(smtpSettings["Port"]),
                 Credentials = new NetworkCredential(smtpSettings["Username"], smtpSettings["Password"]),
