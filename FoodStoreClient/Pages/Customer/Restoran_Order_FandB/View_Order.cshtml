@@ -1,6 +1,12 @@
 ﻿@page
 @model FoodStoreClient.Pages.Customer.Restoran_Order_FandB.View_OrderModel
 @{
+    ViewBag.PageTitle = "Our Menu";
+    ViewBag.Breadcrumbs = new List<Tuple<string, string>>
+    {
+        Tuple.Create("/Customer/Restoran_Home/Home", "Home"),
+        Tuple.Create("View_Order", "Order")
+    };
 }
 <!DOCTYPE html>
 <html lang="en">

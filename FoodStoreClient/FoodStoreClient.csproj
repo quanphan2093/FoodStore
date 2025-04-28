@@ -92,7 +92,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Customer\" />
     <Folder Include="Pages\Guest\" />
     <ProjectReference Include="..\FoodStoreAPI\FoodStoreAPI.csproj" />
   </ItemGroup>

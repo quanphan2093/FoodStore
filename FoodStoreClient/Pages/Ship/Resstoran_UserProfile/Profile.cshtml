@@ -2,6 +2,12 @@
 @model FoodStoreClient.Pages.Ship.Resstoran_UserProfile.ProfileModel
 @{
     var errorMessage = TempData["ErrorMessage"] as string;
+    ViewBag.PageTitle = "Ship";
+    ViewBag.Breadcrumbs = new List<Tuple<string, string>>
+    {
+        Tuple.Create("/Ship/Restoran_Management_Order/Management_Order", "Ship"),
+        Tuple.Create("Profile", "Profile")
+    };
 }
 <!DOCTYPE html>
 <html lang="en">

@@ -1,7 +1,14 @@
 ﻿@page
-@model FoodStoreAPI.Pages.Guest.Restoran_About.AboutModel
+@model FoodStoreClient.Pages.Guest.Restoran_About.AboutModel
 @{
+    ViewBag.PageTitle = "Our Menu";
+    ViewBag.Breadcrumbs = new List<Tuple<string, string>>
+    {
+        Tuple.Create("/Guest/Restoran_Home/Home", "Home"),
+        Tuple.Create("About", "About")
+    };
 }
+
 
 <!DOCTYPE html>
 <html lang="en">

@@ -1,6 +1,12 @@
 ﻿@page
 @model FoodStoreClient.Pages.Sale.Restoran_Revenue_Report.ReportModel
 @{
+    ViewBag.PageTitle = "Sale";
+    ViewBag.Breadcrumbs = new List<Tuple<string, string>>
+    {
+        Tuple.Create("/Sale/Restoran_Management_Menu/Menu", "Sale"),
+        Tuple.Create("Report", "Report")
+    };
 }
 <!DOCTYPE html>
 <html lang="en">

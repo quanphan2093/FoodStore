@@ -1,6 +1,12 @@
 ﻿@page
 @model FoodStoreClient.Pages.Guest.Restoran_Testimonial.TestimonialModel
 @{
+    ViewBag.PageTitle = "Our Menu";
+    ViewBag.Breadcrumbs = new List<Tuple<string, string>>
+    {
+        Tuple.Create("/Guest/Restoran_Home/Home", "Home"),
+        Tuple.Create("Testimonial", "Testimonial")
+    };
 }
 <!DOCTYPE html>
 <html lang="en">

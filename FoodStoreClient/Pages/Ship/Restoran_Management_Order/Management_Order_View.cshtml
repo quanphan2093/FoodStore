@@ -1,6 +1,12 @@
 ﻿@page
 @model FoodStoreClient.Pages.Ship.Restoran_Management_Order.Management_Order_ViewModel
 @{
+    ViewBag.PageTitle = "Ship";
+    ViewBag.Breadcrumbs = new List<Tuple<string, string>>
+    {
+        Tuple.Create("/Ship/Restoran_Management_Order/Management_Order", "Ship"),
+        Tuple.Create("Management_Order_View", "Manage Order")
+    };
 }
 <!DOCTYPE html>
 <html lang="en">
