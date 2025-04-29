@@ -18,8 +18,12 @@ namespace FoodStoreAPI.Controllers.Sale
         [HttpPost("Sale/AddNewProduct")]
         public IActionResult AddNewProduct(ProductDTO productDTO)
         {
-            ProductDAO.AddNewProduct(productDTO);
-            return Ok();
+          var i =  ProductDAO.AddNewProduct(productDTO);
+            if (i)
+            {
+                return Ok("add san pham thanh cong");
+            }          
+            return BadRequest("add loi roi");
         }
       
         [HttpPut("Sale/UpdateProduct/{proId}")]

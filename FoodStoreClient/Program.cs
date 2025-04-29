@@ -44,7 +44,7 @@ app.UseEndpoints(endpoints =>
     endpoints.MapRazorPages();
     endpoints.MapGet("/", context =>
     {
-        context.Response.Redirect("/Guest/Restoran_Login/Login");
+        context.Response.Redirect("/Guest/Restoran_Home/Home");
         return Task.CompletedTask;
     });
 });

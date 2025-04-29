@@ -49,7 +49,7 @@ namespace FoodStoreAPI.Controllers.Guest
                 var stringToken = tokenHandler.WriteToken(token);
                 return Ok(new { Token = stringToken, user });
             }
-            return Unauthorized();
+            return Unauthorized("Tai Khoan Chua ton tai. Ban co muon dang ki tai khoan khong");
         }
 
         [HttpPost("Guest/Account/Register")]

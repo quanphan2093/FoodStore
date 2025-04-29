@@ -416,7 +416,7 @@ namespace FoodStoreAPI.DAO
                     throw new Exception(ex.Message);
                 }            
             }
-            public static void AddNewProduct(ProductDTO productDTO)
+            public static bool AddNewProduct(ProductDTO productDTO)
             {
                 FoodStoreContext context = new FoodStoreContext();
                 try
@@ -437,14 +437,11 @@ namespace FoodStoreAPI.DAO
                     };
                     context.Products.Add(product);
                     context.SaveChanges();
-                }
-                catch (DbUpdateException ex)
-                {
-                    throw new Exception($"Lỗi Database: {ex.InnerException?.Message}");
-                }
+                return true;    
+                }               
                 catch (Exception e)
                 {
-                    throw new Exception($"Lỗi hệ thống: {e.Message}");
+                   return false;
                 }
             }
             public static void UpdateProduct(int proId, productLDTO productDTO)

@@ -29,7 +29,7 @@
             {
                 <div class="container-xxl position-relative p-0">
                     <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                        <a href="~/Index" class="navbar-brand p-0">
+                        <a href="/Customer/Restoran_Home/Home" class="navbar-brand p-0">
                             <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Restoran</h1>
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -102,7 +102,7 @@
             {
                 <div class="container-xxl position-relative p-0">
                     <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                        <a href="~/Index" class="navbar-brand p-0">
+                        <a href="/Ship/Restoran_Management_Order/Management_Order" class="navbar-brand p-0">
                             <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Restoran for Ship</h1>
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -160,7 +160,7 @@
             {
                 <div class="container-xxl position-relative p-0">
                     <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                        <a href="~/Index" class="navbar-brand p-0">
+                        <a href="/Admin/Restoran_Management_Account/Management_Account" class="navbar-brand p-0">
                             <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Restoran for Admin</h1>
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -178,19 +178,12 @@
                                 <a href="/Admin/Restoran_Management_Account/Management_Account" class="nav-item nav-link @(currentPath == "/admin/restoran_management_account/management_account" ? "active" : "")">Account</a>
                                 <a href="/Admin/Restoran_Management_Revenue/Management_Revenue" class="nav-item nav-link @(currentPath == "/admin/restoran_management_revenue/management_revenue" ? "active" : "")">Revenue</a>
 
-                                @if (!string.IsNullOrEmpty(userName))
-                                {
-                                    <div class="nav-item dropdown">
-                                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admin: @userName</a>
-                                        <div class="dropdown-menu m-0">
-                                            <a href="/Admin/Restoran_Logout/Logout" class="dropdown-item">Logout</a>
-                                        </div>
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admin: @userName</a>
+                                    <div class="dropdown-menu m-0">
+                                        <a href="/Admin/Restoran_Logout/Logout" class="dropdown-item">Logout</a>
                                     </div>
-                                }
-                                else
-                                {
-                                    <a href="/Guest/Restoran_Login/Login" class="nav-item nav-link @(currentPath == "/guest/restoran_login/login" ? "active" : "")">Login</a>
-                                }
+                                </div>
                             </div>
 
                         </div>
@@ -220,7 +213,7 @@
             {
                 <div class="container-xxl position-relative p-0">
                     <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                        <a href="~/Index" class="navbar-brand p-0">
+                        <a href="/Sale/Restoran_Management_Menu/Menu" class="navbar-brand p-0">
                             <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Restoran for Sale</h1>
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -281,7 +274,7 @@
             {
                 <div class="container-xxl position-relative p-0">
                     <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-                        <a href="~/Index" class="navbar-brand p-0">
+                        <a href="/Guest/Restoran_Home/Home" class="navbar-brand p-0">
                             <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Restoran</h1>
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">

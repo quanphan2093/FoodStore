@@ -2,6 +2,7 @@
 using FoodStoreAPI.DTO;
 using FoodStoreAPI.DTOs;
 using FoodStoreAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
